@@ -35,7 +35,7 @@
                       <b><?php print t('Invoice No:'); ?></b> <?php print date('Y-m-', $info['order_created']) . $info['order_number']; ?>
                       </td>
                     <td nowrap="nowrap" style="line-height: 1.6em;" valign="top">
-                      <b><?php print t('Order Date:'); ?></b> <?php print date('j F, Y', $info['order_created']); ?>
+                      <b><?php print t('Order Date:'); ?></b> <?php print date('F d, Y', $info['order_created']); ?>
                     </td>
                   </tr>
                   <tr>
