@@ -6,6 +6,169 @@
  *
  **/
 
+
+/* kill underlines */
+ a {
+  text-decoration: none;
+ }
+
+/*  make buttons smaller */
+input.form-submit {
+  padding: 2px 12px 4px;
+}
+
+
+/* homepage latest releases overrides */
+.front #page-title {
+  display: block;
+}
+
+div.view-osu-catalog-homepage {
+  margin-top: 20px;
+}
+
+.view-id-osu_catalog_homepage h3,
+.field-title h2 {
+  margin: 0;
+  line-height: 1.25;
+  padding-right: 2em;
+}
+
+.view-id-osu_catalog_homepage ul {
+  width: 100%;
+  overflow:hidden;
+}
+
+/*.view-id-osu_catalog_homepage .views-row-odd {
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+  width: 50%;
+  clear: both;
+ }
+
+ .view-id-osu_catalog_homepage .views-row-even {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  float: right;
+  clear: both;
+ }*/
+
+.view-id-osu_catalog_homepage li {
+  min-height: 130px;
+  clear: both;
+}
+
+.view-id-osu_catalog_homepage ul li {
+  /*margin-left: 0;*/
+}
+
+.view-id-osu_catalog_homepage li.views-row-odd {
+    float: left;
+    width: 50%;
+    display: inline-block;
+   /* margin-left: 0;*/
+  }
+  
+.view-id-osu_catalog_homepage li.views-row-even {
+  float: right;
+  width: 50%;
+  display: inline-block;
+  margin-top: -100px;
+}
+
+figure.field-publication-thumbnail {
+  display: inline;
+}
+
+
+
+ .view-id-osu_catalog_homepage .home-series-number {
+  text-transform: uppercase;
+}
+
+.field-publication-thumbnail img {
+  float: left;
+  margin-right: 20px;
+}
+
+.logged-in div.content {
+    margin: 2em 0 1em;
+}
+
+/*.view-id-osu_catalog_homepage ul {
+  width: 100%;
+  overflow:hidden;
+}
+
+.view-id-osu_catalog_homepage li {
+  float: left;
+  display: inline-block;
+  width: 50%;
+}
+
+
+
+.view-id-osu_catalog_homepage .item-list ul li {
+  margin: 0;
+  padding: 0;
+  list-style-image: none;
+  min-height: 160px;
+}
+
+div.home-series-number {
+  display: inline;
+}
+
+*/
+
+/*.views-row-odd .field-publication-thumbnail {
+  padding-right: 40px;
+}
+
+.views-row-last .field-publication-thumbnail {
+  padding-right: 0;
+}*/
+
+/*.page-node .field-publication-thumbnail {
+  padding-left: 20px;
+  margin-top: 20px;
+}*/
+
+.field-publication-thumbnail img {
+  border: 1px solid #DBD6D0;
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow:    1px 1px 2px rgba(0, 0, 0, 0.4);
+  box-shadow:         1px 1px 2px rgba(0, 0, 0, 0.4);
+
+/*  -webkit-box-shadow: 4px 4px 5px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow:    4px 4px 5px rgba(50, 50, 50, 0.5);
+  box-shadow:         4px 4px 5px rgba(50, 50, 50, 0.5);*/
+}
+
+/* fixes the padding on block headers */
+#sidebar-first .block h2, 
+#sidebar-second .block h2 {
+  padding-left: 0;
+}
+
+/* project nodes display hack */
+div.field-series-prefix,
+div.field-series-number,
+div.field-series-suffix,
+div.field-new-or-revised,
+div.field-publication-date,
+div.field-commerce-price,
+div.field-length {
+  display: inline;
+}
+
+div.field-publication-description {
+  margin: 20px 0;
+}
+
+
  
 
  /*#edit-submit, input.form-submit, .form-submit {
@@ -1308,3 +1471,8 @@
                       padding: 4px 15px; }
 
 
+/* stuff from commerce kickstart */
+ul.inline, ul.links.inline {
+    display: inline;
+    padding-left: 0;
+}
