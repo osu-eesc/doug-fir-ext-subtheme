@@ -12,7 +12,7 @@
                   <tr>
                     <td width="50%" align="center" valign="middle" style="line-height: 1.6em;">
 											<!-- Invoice Header -->
-                      <?php $invoice_logo = $GLOBALS['base_root'] . '/' . $GLOBALS['base_path'] . drupal_get_path('theme', 'doug_fir_ext') . '/images/ext_h_black.png'; ?>
+                      <?php $invoice_logo = $GLOBALS['base_root'] . $GLOBALS['base_path'] . drupal_get_path('theme', 'doug_fir_ext') . '/images/ext_h_black.png'; ?>
 											<img src="<?php print $invoice_logo; ?>" />
                     </td>
                     <td nowrap="nowrap" valign="top">
