@@ -61,12 +61,22 @@ div.view-osu-catalog-homepage {
   border: none;
 }
 
+
+
 .view-id-osu_catalog_homepage li,
 .view-osu-catalog-homepage td {
   min-height: 150px;
   padding-bottom: 30px;
   clear: both;
 }
+
+.view-osu-catalog-homepage td.col-1 {
+  padding-right: 40px;
+}
+
+/*.view-osu-catalog-homepage td {
+  border-top: 1px solid #999;
+}*/
 
 .view-id-osu_catalog_homepage ul li {
   margin: 0 20px 0 0;
