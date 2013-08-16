@@ -55,32 +55,50 @@ div.view-osu-catalog-homepage {
   clear: both;
  }*/
 
-.view-id-osu_catalog_homepage li {
-  min-height: 130px;
+.view-osu-catalog-homepage tr, td, th, caption {
+  vertical-align: top;
+  background: none;
+  border: none;
+}
+
+.view-id-osu_catalog_homepage li,
+.view-osu-catalog-homepage td {
+  min-height: 150px;
+  padding-bottom: 30px;
   clear: both;
 }
 
 .view-id-osu_catalog_homepage ul li {
-  /*margin-left: 0;*/
+  margin: 0 20px 0 0;
 }
 
+
 .view-id-osu_catalog_homepage li.views-row-odd {
-    float: left;
-    width: 50%;
-    display: inline-block;
-   /* margin-left: 0;*/
-  }
+  float: left;
+  width: 50%;
+  display: block;
+}
   
 .view-id-osu_catalog_homepage li.views-row-even {
   float: right;
   width: 50%;
-  display: inline-block;
-  margin-top: -100px;
+  display: block;
+  /*margin-top: -100px;*/
 }
 
 figure.field-publication-thumbnail {
   display: inline;
+  margin: 0;
+  padding: 0;
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -89,8 +107,8 @@ figure.field-publication-thumbnail {
 }
 
 .field-publication-thumbnail img {
-  float: left;
-  margin-right: 20px;
+  float: right;
+  margin-left: 20px;
 }
 
 .logged-in div.content {
