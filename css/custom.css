@@ -61,8 +61,6 @@ div.view-osu-catalog-homepage {
   border: none;
 }
 
-
-
 .view-id-osu_catalog_homepage li,
 .view-osu-catalog-homepage td {
   min-height: 150px;
@@ -72,6 +70,11 @@ div.view-osu-catalog-homepage {
 
 .view-osu-catalog-homepage td.col-1 {
   padding-right: 40px;
+}
+
+.view-osu-catalog-homepage td.col-1,
+.view-osu-catalog-homepage td.col-2 {
+  width: 50%;
 }
 
 /*.view-osu-catalog-homepage td {
@@ -102,23 +105,19 @@ figure.field-publication-thumbnail {
   padding: 0;
 }
 
-
-
-
-
-
-
-
-
-
+.front div.home-series-number,
+.front table.views-view-grid tbody tr td div.views-field-nothing-1,
+.front table.views-view-grid tbody tr td div.views-field-title {
+  padding-left: 100px;
+}
 
  .view-id-osu_catalog_homepage .home-series-number {
   text-transform: uppercase;
 }
 
 .field-publication-thumbnail img {
-  float: right;
-  margin-left: 20px;
+  float: left;
+  margin-right: 20px;
 }
 
 .logged-in div.content {
@@ -1503,4 +1502,11 @@ div.field-publication-description {
 ul.inline, ul.links.inline {
     display: inline;
     padding-left: 0;
+}
+
+.commerce-backoffice-view .views-exposed-form .date-padding .form-item input, .commerce-backoffice-view .views-exposed-form .views-widget-filter-combine input {
+    padding: 4px 20px 4px 5px;
+}
+.commerce-backoffice-view .views-exposed-form .date-padding .form-item input {
+    background: url("images/calendar.png") no-repeat scroll 95% center white;
 }
