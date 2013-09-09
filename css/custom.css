@@ -7,4 +7,51 @@
  **/
 
  
+/*styles from old site */
+/* for inline images */
+dl.float-right {
+	border: 1px solid #ddd;
+	background-color: #f3f3f3;
+	width: 280px;
+	text-align: left;
+	padding: 0;
+	float: right;
+	margin: 0 0 15px 15px;
+}
 
+dl.float-right-vertical {
+	border: 1px solid #ddd;
+	background-color: #f3f3f3;
+	width: 190px;
+	text-align: left;
+	padding: 0;
+	float: right;
+	margin: 0 0 15px 15px;
+}
+
+dl.float-right-buttons {
+	border: 1px solid #ddd;
+	background-color: #fff;
+	width: 168px;
+	text-align: left;
+	padding: 0;
+	float: right;
+	margin: 0 0 15px 15px;
+}
+
+
+.float-right dd img, .float-right-vertical dd img, .float-right-buttons dd img {
+	border: none;
+}
+
+.float-right dd, .float-right-vertical dd, .float-right-buttons dd {
+	margin: 0;
+	padding: 10px;
+}
+
+.float-right dd.caption, .float-right-vertical dd.caption, .float-right-buttons dd.caption {
+	padding-top: 0;
+	font-family : Georgia, "Times New Roman", Times, serif;
+	font-size : 0.925em;
+	font-style : italic;
+}
