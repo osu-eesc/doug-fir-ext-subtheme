@@ -246,14 +246,11 @@
             <!-- Main Content -->
             <?php if ($page['content']): ?>
               <?php print render($title_prefix); ?>
-              <?php if ( ($title) ) { ?>
+              <?php if ( ($title) && !($is_front) ) { ?>
                 <h2 class="title" id="page-title">
                   <?php print $title; ?>
                 </h2>
               <?php } ?>
-
-
-           
 
               <?php print render($title_suffix); ?>
 

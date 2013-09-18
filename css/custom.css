@@ -1510,3 +1510,7 @@ ul.inline, ul.links.inline {
 .commerce-backoffice-view .views-exposed-form .date-padding .form-item input {
     background: url("images/calendar.png") no-repeat scroll 95% center white;
 }
+
+#edit-profile-eesc-profile legend {
+  display: none;
+}
