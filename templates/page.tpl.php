@@ -365,7 +365,11 @@
           <div class='span2 contact'>
             <h3>Contact Info</h3>
             <div class="specific-contact">
-              <?php echo $footer_message; ?>
+              <?php 
+                if ($footer_message) {
+                  echo $footer_message;
+                } 
+              ?>
             </div>
             <div class="general-contact">
               <a href="http://oregonstate.edu/copyright">Copyright</a>
