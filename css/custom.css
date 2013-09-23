@@ -26,6 +26,21 @@ input.form-submit {
   padding: 2px 12px 4px;
 }
 
+/* change display when out of stock */
+.commerce-add-to-cart div input.form-button-disabled {
+  background-image: none;
+  color: #111;
+}
+
+
+form.commerce-add-to-cart div input#edit-submit.form-button-disabled {
+  background: none;
+  border:none;
+  border-radius: 0;
+  box-shadow: none;
+  color: #252525;
+}
+
 
 /* homepage latest releases overrides */
 .front #page-title {
@@ -37,7 +52,8 @@ div.view-osu-catalog-homepage {
 }
 
 .view-id-osu_catalog_homepage h3,
-.field-title h2 {
+.field-title h2,
+.view-osu-publication-taxonomy-term h3 {
   margin: 0;
   line-height: 1.25;
   padding-right: 2em;
@@ -114,14 +130,22 @@ figure.field-publication-thumbnail {
   padding: 0;
 }
 
-.front div.home-series-number,
+.front .home-series-number,
 .front table.views-view-grid tbody tr td div.views-field-nothing-1,
-.front table.views-view-grid tbody tr td div.views-field-title {
+.front table.views-view-grid tbody tr td div.views-field-title,
+.view-osu-publication-taxonomy-term .views-field-nothing,
+.view-osu-publication-taxonomy-term .views-field-nothing-1,
+.view-osu-publication-taxonomy-term .views-field-title {
   padding-left: 100px;
 }
 
- .view-id-osu_catalog_homepage .home-series-number {
+ .view-id-osu_catalog_homepage .home-series-number,
+ .view-osu-publication-taxonomy-term .home-series-number {
   text-transform: uppercase;
+}
+
+.view-osu-publication-taxonomy-term .views-row {
+  margin-bottom: 1em;
 }
 
 .field-publication-thumbnail img {
@@ -131,6 +155,20 @@ figure.field-publication-thumbnail {
 
 .logged-in div.content {
     margin: 2em 0 1em;
+}
+
+
+
+/*.view-osu-publication-taxonomy-term */
+
+.views-field-field-publication-thumbnail a img {
+  float: left;
+  margin-right: 20px;
+}
+
+.views-field-field-publication-thumbnail a img {
+    border: 1px solid #DBD6D0;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 /*.view-id-osu_catalog_homepage ul {
