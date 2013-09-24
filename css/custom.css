@@ -7,13 +7,19 @@
  **/
 
 /* don't display title on project pages   */
-body.node-type-osu-catalog-publication h2#page-title.title {
+body.node-type-osu-catalog-publication h2#page-title.title,
+body.node-type-publication-author  h2#page-title.title {
   display: none;
 }
 
 /* page title = 26px */
 .node-osu-catalog-publication h2.title {
   font-size: 1.625em;
+}
+
+body.node-type-publication-author #block-system-main .content {
+  margin: 0;
+  padding: 0;
 }
 
 /* kill underlines */
@@ -53,10 +59,20 @@ div.view-osu-catalog-homepage {
 
 .view-id-osu_catalog_homepage h3,
 .field-title h2,
+h3.tutle,
 .view-osu-publication-taxonomy-term h3 {
   margin: 0;
   line-height: 1.25;
   padding-right: 2em;
+}
+
+.view-display-id-author_projects .views-row {
+  margin-top: 1.0em;
+  padding-bottom: 1.5em
+}
+
+.view-display-id-author_projects .views-row .views-field {
+  padding-left: 100px;
 }
 
 .view-id-osu_catalog_homepage ul {
@@ -150,11 +166,19 @@ figure.field-publication-thumbnail {
 
 .field-publication-thumbnail img {
   float: left;
-  margin-right: 20px;
+/*  margin-right: 20px;*/
 }
 
 .logged-in div.content {
     margin: 2em 0 1em;
+}
+
+
+.ds-2col-fluid > .group-left {
+  width: 40%;
+}
+.ds-2col-fluid > .group-right {
+  width: 60%;
 }
 
 
@@ -240,6 +264,12 @@ div.field-length {
 
 div.field-publication-description {
   margin: 20px 0;
+}
+
+
+#sidebar-first #block-views-2b1aa38a02a6653b7084d8c4e3d325d2.block .views-row {
+  padding: 0.25em 0 0.25em 0.5em;
+  font-size: 1.125em;
 }
 
 
