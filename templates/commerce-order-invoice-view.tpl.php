@@ -1,4 +1,4 @@
-<html>
+<?php print $sssss ?><html>
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <title>OSU Catalog Invoice - </title>
@@ -26,7 +26,13 @@
                   </tr>
                   <tr>
                     <td colspan="2" nowrap="nowrap" style="line-height: 1.6em;" valign="top">
-                      <h2>Order Summary</h2>
+                      <p>Thank you for your order and some other stuff TBD</p>
+                    </td>
+          
+                  </tr>
+                  <tr>
+                    <td colspan="2" nowrap="nowrap" style="line-height: 1.6em;" valign="top">
+                      <h2>Order Summary ^^^^^^</h2>
                     </td>
           
                   </tr>
