@@ -55,3 +55,159 @@ dl.float-right-buttons {
 	font-size : 0.925em;
 	font-style : italic;
 }
+
+
+/* css for fall-2013 aes map */
+
+/* These are for defining the hotspots over the markers.
+Remove the background-color after hotspots are placed. */
+
+#block-system-main.block .node .content .aes-map-bg {
+	background:url(../images/aes_map_bg_small.png) no-repeat;
+	min-height: 600px;
+	min-width: 576px;
+	position: relative;
+}
+
+
+
+
+.osrec {
+	position:absolute;
+	width:40px;
+	height:50px;
+	left:75px;
+	top:10px;
+	background-color:rgba(255,255,255,0.3);
+}
+.comes {
+	position:absolute;
+	width:40px;
+	height:50px;
+	left:50px;
+	top:140px;
+	background-color:rgba(255,255,255,0.3);
+}
+.fic {
+	position:absolute;
+	width:30px;
+	height:34px;
+	left:144px;
+	top:60px;
+	background-color:rgba(255,255,255,0.3);
+}
+.nwrec {
+	position:absolute;
+	width:30px;
+	height:40px;
+	left:130px;
+	top:88px;
+	background-color:rgba(255,255,255,0.3);
+}
+.mcarec {
+	position:absolute;
+	width:40px;
+	height:50px;
+	left:208px;
+	top:50px;
+	background-color:rgba(255,255,255,0.3);
+}
+.harec {
+	position:absolute;
+	width:40px;
+	height:50px;
+	left:340px;
+	top:36px;
+	background-color:rgba(255,255,255,0.3);
+}
+.cbarc {
+	position:absolute;
+	width:40px;
+	height:50px;
+	left:394px;
+	top:44px;
+	background-color:rgba(255,255,255,0.3);
+}
+.eoarcu {
+	position:absolute;
+	width:40px;
+	height:50px;
+	left:434px;
+	top:80px;
+	background-color:rgba(255,255,255,0.3);
+}
+.coarc {
+	position:absolute;
+	width:40px;
+	height:50px;
+	left:220px;
+	top:132px;
+	background-color:rgba(255,255,255,0.3);
+}
+.mes {
+	position:absolute;
+	width:40px;
+	height:50px;
+	left:480px;
+	top:200px;
+	background-color:rgba(255,255,255,0.3);
+}
+.eoarcb {
+	position:absolute;
+	width:40px;
+	height:50px;
+	left:346px;
+	top:230px;
+	background-color:rgba(255,255,255,0.3);
+}
+.kbrec {
+	position:absolute;
+	width:40px;
+	height:50px;
+	left:180px;
+	top:342px;
+	background-color:rgba(255,255,255,0.3);
+}
+.sorec {
+	position:absolute;
+	width:40px;
+	height:50px;
+	left:110px;
+	top:334px;
+	background-color:rgba(255,255,255,0.3);
+}
+
+/* This is for defining the bottom text area styling */
+.textArea {
+	display: block;
+	position: absolute;
+	left: -400px;
+	top: 450px;
+	text-align: center;
+	border-radius: 10px;
+	opacity: 0;
+	height: auto;
+	width: 562px;
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+	-webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+	-moz-box-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+	-o-box-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+}
+a:hover .textArea { 
+	display:block;
+	background-color:#f5f2ed;	
+	left:8px;
+	opacity:1;
+}
+a {
+	text-decoration:none;
+}
+.textArea p {
+	padding:10px;
+	color:#c34500;	
+	font-size:1.1em;
+}	
