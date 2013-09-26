@@ -62,14 +62,12 @@ dl.float-right-buttons {
 /* These are for defining the hotspots over the markers.
 Remove the background-color after hotspots are placed. */
 
-#block-system-main.block .node .content .aes-map-bg {
+#block-system-main.block .aes-map-bg {
 	background:url(../images/aes_map_bg_small.png) no-repeat;
 	min-height: 600px;
 	min-width: 576px;
 	position: relative;
 }
-
-
 
 
 .osrec {
