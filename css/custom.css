@@ -1591,3 +1591,23 @@ ul.inline, ul.links.inline {
 #edit-profile-eesc-profile legend {
   display: none;
 }
+
+.field-publication-product form.commerce-add-to-cart {
+  float: right;
+}
+
+.form-item-quantity label {
+  display: inline-block;
+}
+
+/*div.form-item-quantity {
+  display: inline-block;
+}*/
+
+.node-type-osu-catalog-publication form.commerce-add-to-cart .form-submit {
+  background-image: url("../images/bg_add_to_cart.png");
+  background-position: 90% 50%;
+  background-repeat: no-repeat;
+  background-color: #C34500;
+  padding: 5px 50px 5px 10px;
+}
