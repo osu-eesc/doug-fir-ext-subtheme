@@ -209,3 +209,14 @@ a {
 	color:#c34500;	
 	font-size:1.1em;
 }	
+
+/* nice menu a-tag overlap fix */
+#main-menu .nice-menu li.first a {
+	border-radius: inherit;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+#main-menu ul.nice-menu-down li, #main-menu ul.nice-menu-down li:hover, #main-menu ul.nice-menu-down li.menuparent, #main-menu ul.nice-menu-down li.menuparent:hover {
+border-radius: inherit;
+}	
