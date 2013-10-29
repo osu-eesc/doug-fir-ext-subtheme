@@ -221,4 +221,21 @@ a {
 
 #main-menu ul.nice-menu-down li, #main-menu ul.nice-menu-down li:hover, #main-menu ul.nice-menu-down li.menuparent, #main-menu ul.nice-menu-down li.menuparent:hover {
 border-radius: inherit;
-}	
+}
+
+/* Section headers, e.g. "Winter 2013 Stories" */
+.section-header {
+  height: 30px;
+  padding-left: 10px;
+  line-height: 2em;
+  border-bottom: 1px dotted #ccc;
+  border-top: 3px solid #c34500;
+}
+
+.section-header img {
+ float: right; 
+}
+
+.section-header {
+  margin: 2.5em 0;
+}
