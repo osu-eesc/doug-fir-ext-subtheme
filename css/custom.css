@@ -227,15 +227,17 @@ border-radius: inherit;
 .section-header {
   height: 30px;
   padding-left: 10px;
-  line-height: 2em;
+  margin: 2.5em 0;
+  line-height: 1.8em;
   border-bottom: 1px dotted #ccc;
   border-top: 3px solid #c34500;
 }
 
-.section-header img {
- float: right; 
+.section-header a {
+  text-decoration: none;
+  border: none;
 }
 
-.section-header {
-  margin: 2.5em 0;
+.section-header img {
+ float: right; 
 }
