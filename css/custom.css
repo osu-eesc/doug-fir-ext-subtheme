@@ -228,16 +228,17 @@ border-radius: inherit;
   height: 30px;
   padding-left: 10px;
   line-height: 2em;
+  margin: 2.5em 0;
   border-bottom: 1px dotted #ccc;
   border-top: 3px solid #c34500;
 }
 
-.section-header img {
- float: right; 
-}
-
-.section-header {
-  margin: 2.5em 0;
+.section-header a {
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background: url('../images/rss-icon.png');
 }
 
 /* top hat styles */
