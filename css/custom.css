@@ -226,11 +226,12 @@ border-radius: inherit;
 /* Section headers, e.g. "Winter 2013 Stories" */
 .section-header {
   height: 30px;
-  padding-left: 10px;
-  line-height: 1.8em;
+  padding: 0 0 0 10px;
   margin: 2.5em 0;
   border-bottom: 1px dotted #ccc;
   border-top: 3px solid #c34500;
+  line-height: 30px;
+  vertical-align: middle;
 }
 
 .section-header a {
