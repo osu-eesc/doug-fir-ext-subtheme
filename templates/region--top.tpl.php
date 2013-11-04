@@ -30,6 +30,8 @@
 ?>
 <?php if ($content): ?>
   <div id="osu-top-hat" class="<?php print $classes; ?> row">
-    <?php print $content; ?>
+		<div class="container">
+    	<?php print $content; ?>
+		</div>
   </div>
 <?php endif; ?>
