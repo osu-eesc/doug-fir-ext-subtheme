@@ -120,7 +120,7 @@ Remove the background-color after hotspots are placed. */
 	min-height: 600px;
 	min-width: 576px;
 	position: relative;
-	transform-origin: top left;
+  transform-origin: top left;
   -ms-transform-origin: top left;
   -webkit-transform-origin: top left;
 }
