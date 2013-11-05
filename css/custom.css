@@ -6,6 +6,57 @@
  *
  **/
 
+@media (min-width: 1200px) {
+
+}
+
+@media (max-width: 1199px) {
+  #block-system-main.block .aes-map-bg {
+    transform: scale(0.85);
+    -ms-transform: scale(0.85);
+    -webkit-transform: scale(0.85);
+  }
+}
+
+@media (min-width: 980px) {
+
+}
+
+@media (max-width: 979px) {
+  #block-system-main.block .aes-map-bg {
+    transform: scale(0.64);
+    -ms-transform: scale(0.64);
+    -webkit-transform: scale(0.64);
+  }
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 540px) {
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+@media (min-width: 481px) and (max-width: 540px) {
+
+}
+
+@media (max-width: 480px) {
+
+}
  
 /*styles from old site */
 /* for inline images */
@@ -69,6 +120,9 @@ Remove the background-color after hotspots are placed. */
 	min-height: 600px;
 	min-width: 576px;
 	position: relative;
+	transform-origin: top left;
+  -ms-transform-origin: top left;
+  -webkit-transform-origin: top left;
 }
 
 
