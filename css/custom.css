@@ -252,18 +252,19 @@ Remove the background-color after hotspots are placed. */
 	box-shadow: 2px 2px 3px rgba(0,0,0,0.4);
 }
 a:hover .textArea { 
-	display:block;
-	background-color:#f5f2ed;	
-	left:8px;
-	opacity:1;
+	display: block;
+	background-color: #f5f2ed;	
+	left: 8px;
+	opacity: 1;
 }
 a {
 	text-decoration:none;
 }
-.textArea p {
+.textArea p { /* changed to reflect sitewide p styles */
 	padding: 10px;
-	/*color: #c34500;*/
-	font-size: 1.1em;
+	color: #000;
+	/*color: #c34500;
+	font-size: 1.1em;*/
 }	
 
 /* nice menu a-tag overlap fix */
