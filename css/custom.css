@@ -287,3 +287,10 @@ border-radius: 0 14px 14px 0;
 div#links {
 	padding-bottom: 15px;
 }
+
+div#links ul {
+	margin: 0;
+}
+div#links ul li {
+	margin-right: 10px;
+}
