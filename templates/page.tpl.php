@@ -263,6 +263,14 @@
                 <a name="main-content"></a>
                 <?php print render($page['content']); ?>
               </div> <!-- /content -->
+
+							<?php	$links = node_view($node); ?>
+							<?php if ($links): ?>
+								<div id="links">
+									<?php print render($links['links']); ?>
+								</div>
+							<?php endif; ?>
+									
             <?php endif; ?>
 
             <!-- Main page columns  -->
