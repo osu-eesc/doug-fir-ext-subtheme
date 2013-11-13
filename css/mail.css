@@ -1,0 +1,63 @@
+body {
+  font-size: 87.5%;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #252525;
+  line-height: 1.2;
+  background-color: #fff;
+}
+
+/* Table Styles */
+table {
+	width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 93.8%;
+  font-weight: 400;
+}
+
+.payment-table table {
+  margin-top: 10px;
+}
+
+table th {
+  background: #E0E0E0;
+  font-weight: 600;
+  padding: 10px;
+  text-align: left;
+  white-space: nowrap;
+  border-color: #BEBFB9;
+  border-style: solid;
+  border-width: 1px;
+}
+
+table th.views-align-right {
+  text-align: right;
+}
+
+td {
+  padding: 5px 10px;
+  text-align: left;
+  border-color: #E0E0E0;
+  border-style: solid;
+  border-width: 1px;
+}
+
+
+
+tbody tr:nth-child(even) {
+  background: none repeat scroll 0 0 #F1F1F1;
+  border-color: #BEBFB9;
+  border-style: solid;
+  border-width: 1px;
+}
+
+
+.balance-due {
+  font-weight: bold;
+  text-align: right;
+  white-space: nowrap;
+}
+
+
+

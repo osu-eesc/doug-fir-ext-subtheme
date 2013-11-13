@@ -1611,3 +1611,12 @@ ul.inline, ul.links.inline {
   background-color: #C34500;
   padding: 5px 50px 5px 10px;
 }
+
+
+.page-user .profile ul.user-information li, 
+.page-checkout .profile ul.user-information li {
+    border-bottom: 0 none;
+    width: 33%;
+}
+
+
