@@ -153,6 +153,7 @@
       $audience_menu = menu_tree_all_data('audience-menu', '', 2);
       $main_menu = menu_tree_all_data('main-menu', '', 2);
       $tophat_menu = menu_tree_all_data('osu-top-hat', '', 1);
+			$extension_top_hat_settings = variable_get('extension_top_hat_settings');
       if ( !empty($audience_menu) || !empty($main_menu) || !empty($tophat_menu) ) {
         echo '<ul id="mobile-menu">';
           if (!empty($main_menu) ) {
@@ -165,7 +166,7 @@
               print render(menu_tree_output($audience_menu));
             echo '</li>';
           }
-          if (!empty($tophat_menu) ) {
+          if (!empty($tophat_menu) && !($extension_top_hat_settings['hide_utility'])) {
             echo '<li id="mobile-osu-top-hat">';
               print render(menu_tree_output($tophat_menu));
             echo '</li>';
@@ -366,30 +367,9 @@
   </div> <!-- /container -->
 
   <!-- Page Footer -->
+	<?php if ($page['footer']) {
+             print render($page['footer']);
+         	} ?>
 
-    <div id='footer'>
-      <div class='container'>
-        <div class='row'>
-          <div class='span2 contact'>
-            <h3>Contact Info</h3>
-            <div class="specific-contact">
-              <?php echo $footer_message; ?>
-            </div>
-            <div class="general-contact">
-              <a href="http://oregonstate.edu/copyright">Copyright</a>
-              &copy;<?php echo date("Y"); ?>
-              Oregon State University<br />
-              <a href="http://oregonstate.edu/disclaimer">Disclaimer</a>
-            </div>
-             <div class="social-media"><?php print doug_fir_social_media(); ?></div>
-          </div>
-          <div class='span10'>
-            <?php if ($page['footer']) {
-                print render($page['footer']);
-             } ?>
-          </div>
-        </div>
-      </div>
-    </div>
 
 </div> <!-- /page-wrapper -->
