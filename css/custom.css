@@ -66,12 +66,11 @@ dl.float-right-buttons {
 div.caption-inner {
   border: 1px solid #ddd;
   background-color: #fff;
-  /*width: 168px;*/
   text-align: left;
-  font-family : Georgia, "Times New Roman", Times, serif;
-  font-size : 0.75em;
-  font-style : italic;
-  /*box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);*/
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 0.75em;
+  font-style: italic;
+  line-height: 1.3;
 }
 
 div.caption p {
@@ -98,13 +97,15 @@ div.caption-right {
 div.caption-center {
   float: right;
   margin: 0 0 10px 10px;
-  /*display: block;
-  text-align: center;*/
 }
 
 div.caption-center .caption-inner {
   float: right;
-  /*display: inline-block;*/
+}
+
+#content p.caption-text {
+	margin: 0.25em 0;
+	padding: 0 0.25em;
 }
 
 
@@ -122,7 +123,7 @@ Remove the background-color after hotspots are placed. */
 
 
 .osrec {
-	position:absolute;˝
+	position:absolute;
 	width:40px;
 	height:50px;
 	left:75px;
