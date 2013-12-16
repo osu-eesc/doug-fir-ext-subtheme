@@ -115,115 +115,114 @@ div.caption-center .caption-inner {
 Remove the background-color after hotspots are placed. */
 
 #block-system-main.block .aes-map-bg {
-	background:url(../images/aes_map_bg_small.png) no-repeat;
-	min-height: 600px;
-	min-width: 576px;
+	background:url(../images/OAP_AES_map_web.jpg) no-repeat;
+	min-height: 433px;
+	min-width: 560px;
 	position: relative;
 }
-
 
 .osrec {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left:75px;
-	top:10px;
+	left: 85px;
+	top: 7px;
 	background-color:rgba(255,255,255,0.3);
 }
 .comes {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left:50px;
-	top:140px;
+	left: 59px;
+	top: 137px;
 	background-color:rgba(255,255,255,0.3);
 }
 .fic {
 	position:absolute;
 	width:30px;
 	height:34px;
-	left:144px;
-	top:60px;
+	left: 154px;
+	top: 59px;
 	background-color:rgba(255,255,255,0.3);
 }
 .nwrec {
 	position:absolute;
 	width:30px;
 	height:40px;
-	left:130px;
-	top:88px;
+	left: 141px;
+	top: 87px;
 	background-color:rgba(255,255,255,0.3);
 }
 .mcarec {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left:208px;
-	top:50px;
+	left: 214px;
+	top: 44px;
 	background-color:rgba(255,255,255,0.3);
 }
 .harec {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left:340px;
-	top:36px;
+	left: 346px;
+	top: 29px;
 	background-color:rgba(255,255,255,0.3);
 }
 .cbarc {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left:394px;
-	top:44px;
+	left: 401px;
+	top: 40px;
 	background-color:rgba(255,255,255,0.3);
 }
 .eoarcu {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left:434px;
-	top:80px;
+	left: 437px;
+	top: 72px;
 	background-color:rgba(255,255,255,0.3);
 }
 .coarc {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left:220px;
-	top:132px;
+	left: 230px;
+	top: 130px;
 	background-color:rgba(255,255,255,0.3);
 }
 .mes {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left:480px;
-	top:200px;
+	left: 483px;
+	top: 193px;
 	background-color:rgba(255,255,255,0.3);
 }
 .eoarcb {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left:346px;
-	top:230px;
+	left: 352px;
+	top: 226px;
 	background-color:rgba(255,255,255,0.3);
 }
 .kbrec {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left:180px;
-	top:342px;
+	left: 187px;
+	top: 334px;
 	background-color:rgba(255,255,255,0.3);
 }
 .sorec {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left:110px;
-	top:334px;
+	left: 117px;
+	top: 327px;
 	background-color:rgba(255,255,255,0.3);
 }
 
@@ -233,7 +232,6 @@ Remove the background-color after hotspots are placed. */
 	position: absolute;
 	left: -400px;
 	top: 450px;
-	text-align: center;
 	border-radius: 10px;
 	opacity: 0;
 	height: auto;
@@ -261,7 +259,43 @@ a {
 	color: #000;
 	/*color: #c34500;
 	font-size: 1.1em;*/
+}
+.textArea p span {
+	float: left;
 }	
+
+/* Map fallback for phones and tablets */
+.phone-map {
+	margin-bottom: 2em;
+}
+@media (max-width: 767px) {
+	#block-system-main.block .aes-map-bg {
+		background: none;
+		min-width: inherit;
+	}
+	#block-system-main.block .aes-map-bg a:hover {
+		text-decoration: none;
+	}
+	#block-system-main.block .aes-map-bg a:hover p b {
+		text-decoration: underline;
+	}
+	.hoverArea {
+		display: none;
+	}
+	.textArea {
+		position: static;
+		display: inline;
+		width: auto;
+	}
+	.textArea b {
+		/*text-decoration: underline;*/
+		color: #c34500;
+	}
+	a:hover .textArea { 
+		display: inherit;
+		background-color: none;	
+	}
+}
 
 /* nice menu a-tag overlap fix */
 #main-menu .nice-menu li.first a {
