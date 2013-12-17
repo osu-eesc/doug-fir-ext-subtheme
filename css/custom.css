@@ -286,6 +286,7 @@ a {
 		position: static;
 		display: inline;
 		width: auto;
+		opacity: 1;
 	}
 	.textArea b {
 		/*text-decoration: underline;*/
