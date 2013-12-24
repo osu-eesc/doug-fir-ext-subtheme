@@ -385,3 +385,15 @@ div#links ul {
 div#links ul li {
 	margin-right: 10px;
 }
+
+/*unbold search terms */
+.page-search-content strong {
+  font-weight: normal; 
+}
+
+/*reduce size of search snippet*/
+.field-name-search-snippet {
+	color: #4F4A4A;
+	font-size: 0.923em;
+	line-height: 1.2;
+}
