@@ -127,7 +127,6 @@ Remove the background-color after hotspots are placed. */
 	height:50px;
 	left: 85px;
 	top: 7px;
-	background-color:rgba(255,255,255,0.3);
 }
 .comes {
 	position:absolute;
@@ -135,7 +134,6 @@ Remove the background-color after hotspots are placed. */
 	height:50px;
 	left: 59px;
 	top: 137px;
-	background-color:rgba(255,255,255,0.3);
 }
 .fic {
 	position:absolute;
@@ -143,7 +141,6 @@ Remove the background-color after hotspots are placed. */
 	height:34px;
 	left: 154px;
 	top: 59px;
-	background-color:rgba(255,255,255,0.3);
 }
 .nwrec {
 	position:absolute;
@@ -151,7 +148,6 @@ Remove the background-color after hotspots are placed. */
 	height:40px;
 	left: 141px;
 	top: 87px;
-	background-color:rgba(255,255,255,0.3);
 }
 .mcarec {
 	position:absolute;
@@ -159,7 +155,6 @@ Remove the background-color after hotspots are placed. */
 	height:50px;
 	left: 214px;
 	top: 44px;
-	background-color:rgba(255,255,255,0.3);
 }
 .harec {
 	position:absolute;
@@ -167,15 +162,20 @@ Remove the background-color after hotspots are placed. */
 	height:50px;
 	left: 346px;
 	top: 29px;
-	background-color:rgba(255,255,255,0.3);
 }
-.cbarc {
+.cbarcu {
 	position:absolute;
 	width:40px;
 	height:50px;
 	left: 401px;
 	top: 40px;
-	background-color:rgba(255,255,255,0.3);
+}
+.cbarcs {
+	position:absolute;
+	width:40px;
+	height:50px;
+	left: 264px;
+	top: 55px;
 }
 .eoarcu {
 	position:absolute;
@@ -183,7 +183,6 @@ Remove the background-color after hotspots are placed. */
 	height:50px;
 	left: 437px;
 	top: 72px;
-	background-color:rgba(255,255,255,0.3);
 }
 .coarc {
 	position:absolute;
@@ -191,7 +190,6 @@ Remove the background-color after hotspots are placed. */
 	height:50px;
 	left: 230px;
 	top: 130px;
-	background-color:rgba(255,255,255,0.3);
 }
 .mes {
 	position:absolute;
@@ -199,7 +197,6 @@ Remove the background-color after hotspots are placed. */
 	height:50px;
 	left: 483px;
 	top: 193px;
-	background-color:rgba(255,255,255,0.3);
 }
 .eoarcb {
 	position:absolute;
@@ -207,7 +204,6 @@ Remove the background-color after hotspots are placed. */
 	height:50px;
 	left: 352px;
 	top: 226px;
-	background-color:rgba(255,255,255,0.3);
 }
 .kbrec {
 	position:absolute;
@@ -215,7 +211,6 @@ Remove the background-color after hotspots are placed. */
 	height:50px;
 	left: 187px;
 	top: 334px;
-	background-color:rgba(255,255,255,0.3);
 }
 .sorec {
 	position:absolute;
@@ -223,7 +218,6 @@ Remove the background-color after hotspots are placed. */
 	height:50px;
 	left: 117px;
 	top: 327px;
-	background-color:rgba(255,255,255,0.3);
 }
 
 /* This is for defining the bottom text area styling */
