@@ -228,6 +228,7 @@ Remove the background-color after hotspots are placed. */
 	top: 450px;
 	border-radius: 10px;
 	opacity: 0;
+	filter: alpha(opacity=0);
 	height: auto;
 	width: 562px;
 	-webkit-transition: all .5s ease-in-out;
@@ -244,6 +245,7 @@ a:hover .textArea {
 	background-color: #f5f2ed;	
 	left: 8px;
 	opacity: 1;
+	filter: alpha(opacity=100);
 }
 a {
 	text-decoration:none;
