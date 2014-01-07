@@ -158,7 +158,9 @@
         echo '<ul id="mobile-menu">';
           if (!empty($main_menu) ) {
             echo '<li id="mobile-main-menu">';
-              print render(menu_tree_output($main_menu));
+            $menu_tree = menu_tree_output($main_menu);
+              print render($menu_tree);
+              //print render(menu_tree_output($main_menu));
             echo '</li>';
           }
           if (!empty($audience_menu) ) {
@@ -322,7 +324,7 @@
             <?php endif; ?>
 
 
-            <!-- Post-ontent -->
+            <!-- Post-content -->
             <?php if ($page['post_content']): ?>
               <div id='post-content' >
                 <div class='content'>
