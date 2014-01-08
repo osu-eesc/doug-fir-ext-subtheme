@@ -97,6 +97,7 @@ div.caption-right {
 
 div.caption-center {
   float: right;
+  clear: both;
   margin: 0 0 10px 10px;
 }
 
