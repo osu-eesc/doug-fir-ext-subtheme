@@ -63,6 +63,10 @@ dl.float-right-buttons {
  * Caption filter default styling for displaying image captions.
  */
 
+div.caption {
+  clear: both;
+}
+
 div.caption-inner {
   border: 1px solid #ddd;
   background-color: #f3f3f3;
@@ -97,7 +101,6 @@ div.caption-right {
 
 div.caption-center {
   float: right;
-  clear: both;
   margin: 0 0 10px 10px;
 }
 
