@@ -76,7 +76,7 @@ dl.float-right-buttons {
 }
 
 #content div.caption .caption-inner p.caption-text {
-	margin:	.7em 0;
+	margin:	0 0 .3em 0; /* removes extra margin below */
 }
 
 div.caption {
