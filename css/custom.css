@@ -137,103 +137,107 @@ Remove the background-color after hotspots are placed. */
 	position: relative;
 }
 
+/*.hoverArea {
+  background: rgba(255,255,255,0.5);
+}*/
+
 .osrec {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left: 85px;
-	top: 7px;
+  left: 82px;
+  top: 1px;
 }
 .comes {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left: 59px;
-	top: 137px;
+  left: 56px;
+  top: 132px;
 }
 .fic {
 	position:absolute;
 	width:30px;
 	height:34px;
-	left: 154px;
-	top: 59px;
+  left: 151px;
+  top: 51px;
 }
 .nwrec {
 	position:absolute;
 	width:30px;
 	height:40px;
-	left: 141px;
-	top: 87px;
+  left: 139px;
+  top: 85px
 }
 .mcarec {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left: 214px;
-	top: 44px;
+  left: 214px;
+  top: 38px;
 }
 .harec {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left: 346px;
-	top: 29px;
+  left: 347px;
+  top: 23px;
 }
 .cbarcu {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left: 401px;
-	top: 40px;
+  left: 403px;
+  top: 33px;
 }
 .cbarcs {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left: 264px;
-	top: 55px;
+  left: 264px;
+  top: 51px;
 }
 .eoarcu {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left: 437px;
-	top: 72px;
+  left: 440px;
+  top: 68px;
 }
 .coarc {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left: 230px;
-	top: 130px;
+  left: 230px;
+  top: 126px;
 }
 .mes {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left: 483px;
-	top: 193px;
+  left: 486px;
+  top: 189px;
 }
 .eoarcb {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left: 352px;
-	top: 226px;
+  left: 353px;
+  top: 222px;
 }
 .kbrec {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left: 187px;
-	top: 334px;
+  left: 186px;
+  top: 334px;
 }
 .sorec {
 	position:absolute;
 	width:40px;
 	height:50px;
-	left: 117px;
-	top: 327px;
+  left: 115px;
+  top: 325px;
 }
 
 /* This is for defining the bottom text area styling */
