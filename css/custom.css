@@ -75,8 +75,8 @@ dl.float-right-buttons {
 	margin: 0;
 }
 
-.caption-inner p {
-	margin:	0;
+#content div.caption .caption-inner p.caption-text {
+	margin:	.7em 0;
 }
 
 div.caption {
