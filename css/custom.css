@@ -70,53 +70,37 @@ dl.float-right-buttons {
  * @file
  * Caption filter default styling for displaying image captions.
  */
-
-div.caption {
-  clear: both;
+.caption-inner a img {
+	padding-bottom: 10px;
+	margin: 0;
 }
-
-div.caption-inner {
-  border: 1px solid #ddd;
-  background-color: #f3f3f3;
-  color: #595959;
-  padding: 10px;
-  text-align: left;
-  font-size: 0.925em;
-  line-height: 1.3;
-}
-
-/*
-	.caption .caption-inner {
-		background-color: #F3F3F3;
-		padding: 10px;
-		font-family: inherit;
-		font-size: 0.925em;
-		font-style: inherit;
-		color: #595959;
-	}
-
- */
 
 .caption-inner p {
 	margin:	0;
 }
 
-div.caption p {
-  margin: .25em 0;
+div.caption {
+  clear: both;
 }
+
+.caption div.caption-inner {
+  border: 1px solid #ddd;
+  background-color: #f3f3f3;
+  color: #595959;
+  padding: 10px;
+  text-align: left;
+  font-family: inherit;
+  font-size: 0.925em;
+  font-style: inherit;
+  line-height: 1.3;
+}
+
 
 div.caption img,
 div.caption object {
   margin-bottom: 0px;
   display: block;
 }
-
-/*
-	.caption-inner a img {
-		padding-bottom: 10px;
-		margin: 0;
-	}
-*/
 
 
 /** aligned captions **/
@@ -136,11 +120,8 @@ div.caption-center {
 }
 
 
-p.caption-text {
+.caption .caption-inner .caption-text {
 	margin: 0;
-	font-family: Gudea, Arial, Verdana, sans-serif;
-	font-style: normal;
-	color: #595959;
 }
 
 
