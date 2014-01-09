@@ -240,7 +240,7 @@ Remove the background-color after hotspots are placed. */
 .textArea {
 	display: block;
 	position: absolute;
-	left: -400px;
+	left: -600px;
 	top: 450px;
 	border-radius: 10px;
 	opacity: 0;
@@ -259,7 +259,7 @@ Remove the background-color after hotspots are placed. */
 a:hover .textArea { 
 	display: block;
 	background-color: #f5f2ed;	
-	left: 8px;
+	left: 0px;
 	opacity: 1;
 	filter: alpha(opacity=100);
 }
