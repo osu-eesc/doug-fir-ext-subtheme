@@ -104,7 +104,7 @@
 <?php endif; ?>
 <div id="mobile-icon-menu">
   <a href='#' id="toggle-mobile-menu" class="m-icon-link"><i class="icon-reorder"></i></a>
-  <a href='<?php echo $base_path; ?>search/osu' id="mobile-search-link" class="m-icon-link"><i class="icon-search"></i></a>
+  <a href='<?php echo $base_path; ?>search/content' id="mobile-search-link" class="m-icon-link"><i class="icon-search"></i></a>
 </div>
 
 <div id='page-wrapper' class='container'>
