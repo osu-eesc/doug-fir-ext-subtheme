@@ -310,7 +310,7 @@ a {
 	}
 	a:hover .textArea { 
 		display: inherit;
-		background-color: none;	
+		background-color: transparent;	
 	}
 }
 
