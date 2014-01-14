@@ -106,17 +106,17 @@ div.caption object {
 /** aligned captions **/
 div.caption-left {
   float: left;
-  margin: 0 10px 10px 0;
+  margin: 10px 15px 15px 0;
 }
 
 div.caption-right {
   float: right;
-  margin: 10px 0 10px 10px;
+  margin: 10px 0 15px 15px;
 }
 
 div.caption-center {
   float: right;
-  margin: 0 0 10px 10px;
+  margin: 10px 0 15px 15px;
 }
 
 
