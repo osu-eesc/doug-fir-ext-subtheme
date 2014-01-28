@@ -8,8 +8,11 @@ base theme = doug_fir
 
 stylesheets[all][] = css/custom.css
 
+<<<<<<< HEAD
 
 ; Default regions
+=======
+>>>>>>> origin/oap
 regions[page_top]           = Page Top
 regions[page_bottom]        = Page Bottom
 regions[top]                = Top
@@ -36,6 +39,7 @@ regions[main_third]         = Main Column3
 ;regions[footer_thirdcolumn]  = Footer third column
 ;regions[footer_fourthcolumn] = Footer fourth column
 
+<<<<<<< HEAD
 features[] = logo
 features[] = name
 features[] = favicon
@@ -55,3 +59,5 @@ settings[hide_breadcrumbs] = 0
 settings[hide_book_nav] = 0
 settings[hide_terms = 0
 
+=======
+>>>>>>> origin/oap

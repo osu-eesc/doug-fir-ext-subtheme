@@ -99,14 +99,12 @@
 ?>
 
 <!-- Top-Hat -->
-<?php
-  if (function_exists('osu_top_hat_render')) {
-    print osu_top_hat_render();
-  }
-?>
+<?php if ($page['top']): ?>
+	<?php print render($page['top']); ?>
+<?php endif; ?>
 <div id="mobile-icon-menu">
   <a href='#' id="toggle-mobile-menu" class="m-icon-link"><i class="icon-reorder"></i></a>
-  <a href='<?php echo $base_path; ?>search/osu' id="mobile-search-link" class="m-icon-link"><i class="icon-search"></i></a>
+  <a href='<?php echo $base_path; ?>search/content' id="mobile-search-link" class="m-icon-link"><i class="icon-search"></i></a>
 </div>
 
 <div id='page-wrapper' class='container'>
@@ -155,11 +153,14 @@
       $audience_menu = menu_tree_all_data('audience-menu', '', 2);
       $main_menu = menu_tree_all_data('main-menu', '', 2);
       $tophat_menu = menu_tree_all_data('osu-top-hat', '', 1);
+			$extension_top_hat_settings = variable_get('extension_top_hat_settings');
       if ( !empty($audience_menu) || !empty($main_menu) || !empty($tophat_menu) ) {
         echo '<ul id="mobile-menu">';
           if (!empty($main_menu) ) {
             echo '<li id="mobile-main-menu">';
-              print render(menu_tree_output($main_menu));
+            $menu_tree = menu_tree_output($main_menu);
+              print render($menu_tree);
+              //print render(menu_tree_output($main_menu));
             echo '</li>';
           }
           if (!empty($audience_menu) ) {
@@ -167,7 +168,7 @@
               print render(menu_tree_output($audience_menu));
             echo '</li>';
           }
-          if (!empty($tophat_menu) ) {
+          if (!empty($tophat_menu) && !($extension_top_hat_settings['hide_utility'])) {
             echo '<li id="mobile-osu-top-hat">';
               print render(menu_tree_output($tophat_menu));
             echo '</li>';
@@ -265,6 +266,16 @@
                 <a name="main-content"></a>
                 <?php print render($page['content']); ?>
               </div> <!-- /content -->
+
+							<?php if($node): ?>
+								<?php	$links = node_view($node); ?>
+								<?php if ($links): ?>
+									<div id="links">
+										<?php print render($links['links']); ?>
+									</div>
+								<?php endif; ?>
+							<?php endif; ?>
+									
             <?php endif; ?>
 
             <!-- Main page columns  -->
@@ -313,7 +324,7 @@
             <?php endif; ?>
 
 
-            <!-- Post-ontent -->
+            <!-- Post-content -->
             <?php if ($page['post_content']): ?>
               <div id='post-content' >
                 <div class='content'>
@@ -358,34 +369,9 @@
   </div> <!-- /container -->
 
   <!-- Page Footer -->
+	<?php if ($page['footer']) {
+             print render($page['footer']);
+         	} ?>
 
-    <div id='footer'>
-      <div class='container'>
-        <div class='row'>
-          <div class='span2 contact'>
-            <h3>Contact Info</h3>
-            <div class="specific-contact">
-              <?php 
-                if ($footer_message) {
-                  echo $footer_message;
-                } 
-              ?>
-            </div>
-            <div class="general-contact">
-              <a href="http://oregonstate.edu/copyright">Copyright</a>
-              &copy;<?php echo date("Y"); ?>
-              Oregon State University<br />
-              <a href="http://oregonstate.edu/disclaimer">Disclaimer</a>
-            </div>
-             <div class="social-media"><?php print doug_fir_social_media(); ?></div>
-          </div>
-          <div class='span10'>
-            <?php if ($page['footer']) {
-                print render($page['footer']);
-             } ?>
-          </div>
-        </div>
-      </div>
-    </div>
 
 </div> <!-- /page-wrapper -->
