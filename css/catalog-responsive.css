@@ -1,0 +1,87 @@
+/**
+ * @file catalog-responsive.css
+ *
+ * Catalog Responsive Stylesheet
+ *
+ * EESC
+ * Oregon State University
+ *
+ */
+
+@media (max-width: 480px) {
+  article.view-mode-full figure.field-publication-thumbnail img {
+    max-width: 40%;
+    height: auto;
+    float: left;
+    float: left;
+    height: auto;
+    margin: 2.5em 1em 0.5em 0;
+  }
+
+  #environment-indicator {
+    display: none;
+    width: 0;
+  }
+
+  article {
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+  }
+
+  figure.field-publication-thumbnail {
+    margin: -2em 0;
+  }
+
+  h2 {
+    font-size: 1.125em;
+    line-height: 1.2;
+  }
+
+  h4.pub-series-number {
+    font-size: 1.0em;
+  }
+
+  .series-date-length {
+    font-size: 0.875em;
+  }
+}
+
+@media (max-width: 540px) {
+
+}
+
+@media (min-width: 481px) and (max-width: 540px) {
+
+}
+
+/* Here goes stuff we want for small tablets, but NOT for phones */
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (min-width: 768px) {
+  /* set  a min-height for tablet and up sizes */
+  #page-wrapper.container {
+    min-height: 600px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+@media (max-width: 979px) {
+
+}
+
+@media (min-width: 980px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}

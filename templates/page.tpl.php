@@ -149,7 +149,7 @@
     <h1><a href='<?php print $front_page; ?>'><?php print $site_name; ?></a></h1>
 
   </div>
-  <?php 
+  <?php
       $audience_menu = menu_tree_all_data('audience-menu', '', 2);
       $main_menu = menu_tree_all_data('main-menu', '', 2);
       $tophat_menu = menu_tree_all_data('osu-top-hat', '', 1);
@@ -173,7 +173,7 @@
               print render(menu_tree_output($tophat_menu));
             echo '</li>';
           }
-         echo '</ul>'; 
+         echo '</ul>';
         }
    ?>
    <!-- Main menu navbar -->
@@ -182,18 +182,6 @@
           <?php print render($page['nav']); ?>
       </div> <!-- /#main-menu -->
     <?php endif; ?>
-
-    <!-- Messages and breadcrumbs -->
-    <div id="messages">
-      <?php if ($messages){
-        print $messages;
-      }
-
-      if ($breadcrumb && ! theme_get_setting('hide_breadcrumbs') ) {
-        print $breadcrumb;
-        }
-      ?>
-    </div> <!-- messages -->
 
 
     <!-- Full width top region -->
@@ -237,6 +225,22 @@
         <!-- Main content and middle sidebar -->
           <div class='span<?php print $main_cols; ?>'>
 
+
+            <!-- Messages and breadcrumbs -->
+            <div id="messages">
+              <?php
+                if ($messages){
+                  print $messages;
+                }
+
+                if ($breadcrumb && ! theme_get_setting('hide_breadcrumbs') ) {
+                  print $breadcrumb;
+                }
+              ?>
+            </div> <!-- messages -->
+
+
+
             <!-- Pre-content -->
             <?php if ($page['pre_content']): ?>
               <div id='pre-content'>
@@ -262,7 +266,7 @@
                 </div>
               <?php endif; ?>
 
-              <div id='content' >
+              <div id='content'>
                 <a name="main-content"></a>
                 <?php print render($page['content']); ?>
               </div> <!-- /content -->
@@ -275,7 +279,7 @@
 									</div>
 								<?php endif; ?>
 							<?php endif; ?>
-									
+
             <?php endif; ?>
 
             <!-- Main page columns  -->

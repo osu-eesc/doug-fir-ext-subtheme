@@ -1,0 +1,141 @@
+/**
+ * @file print.css
+ *
+ * Custom Print stylesheet for Doug-fir catalog subtheme
+ *
+ **/
+
+body {
+  font: normal 10pt/1.2 Georgia, "Times New Roman", Times, serif !important;
+  font-weight: 400;
+  color: #000;
+  background-color: #fff;
+}
+
+.catman-invoice-header {
+  float: right;
+  margin-bottom: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+#branding {
+  display: none;
+}
+
+/* Catman reports printing */
+.catman-reports form,
+div.tabs-secondary,
+table th.views-field-operations-dropbutton,
+table td.views-field-operations-dropbutton {
+  display: none;
+}
+
+.catman-invoice-created {
+  margin-bottom: 10px;
+}
+
+/*.ds-2col-stacked-fluid > .group-left {
+  padding-right: 20px;
+}
+
+.ds-2col-stacked-fluid > .group-right {
+  padding-left: 20px;
+}*/
+
+.catman-invoice-catman-invoice h3,
+h2.title {
+  font-family: Georgia, "Times New Roman", Times, serif !important;
+}
+
+/*.group-left h3 {
+  margin-top: 90px;
+}*/
+
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-weight: 400;
+  font-size: 75%;
+}
+
+/*.payment-table table {
+  margin-top: 10px;
+}*/
+
+table th {
+  background: #fff;
+  color: #000;
+  font-weight: 500;
+  padding: 5px 10px;
+  text-align: left;
+  white-space: nowrap;
+  border-color: #BEBFB9;
+  border-style: solid;
+  border-width: 1px;
+}
+
+table th.views-align-right {
+  text-align: right;
+}
+
+table td {
+  padding: 5px 10px !important;
+  background: #fff;
+  text-align: left;
+  border-color: #E0E0E0;
+  border-style: solid;
+  border-width: 1px;
+}
+
+
+
+tbody tr:nth-child(even) {
+  background: none repeat scroll 0 0 #F1F1F1;
+  border-color: #BEBFB9;
+  border-style: solid;
+  border-width: 1px;
+}
+
+
+.balance-due {
+  font-weight: bold;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.attachment-before table.views-table {
+  font-size: 1.75em;
+  margin-bottom: 1.250em;
+}
+
+#osu-top-hat,
+#mobile-icon-menu,
+#header,
+#mobile-menu,
+#main-menu,
+#messages,
+div.tabs,
+div.region-top > div.container,
+#block-block-4,
+#sidebar-first,
+#footer {
+  display: none !important;
+}
+
+.row-fluid [class*="span"]:first-child {
+    margin-left: 0;
+}
+
+.row-fluid .span6 {
+  width: 48.717948718%;
+  *width: 48.66671920980328%;
+}
+
+

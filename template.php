@@ -9,7 +9,7 @@
 /**
 * Replacement for theme_form_element().
 */
-function doug_fir_ext_webform_element($variables) {
+function doug_fir_catalog_webform_element($variables) {
   // Ensure defaults.
   $variables['element'] += array(
     '#title_display' => 'before',
@@ -49,9 +49,9 @@ function doug_fir_ext_webform_element($variables) {
     case 'before':
     case 'invisible':
       $output .= ' ' . theme('form_element_label', $variables);
-  if (!empty($element['#description'])) {
-$output .= ' <div class="description">' . $element['#description'] . "</div>\n";
-  }
+      if (!empty($element['#description'])) {
+        $output .= ' <div class="description">' . $element['#description'] . "</div>\n";
+      }
 
       $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
       break;
@@ -59,9 +59,9 @@ $output .= ' <div class="description">' . $element['#description'] . "</div>\n";
     case 'after':
       $output .= ' ' . $prefix . $element['#children'] . $suffix;
       $output .= ' ' . theme('form_element_label', $variables) . "\n";
-  if (!empty($element['#description'])) {
-$output .= ' <div class="description">' . $element['#description'] . "</div>\n";
-  }
+      if (!empty($element['#description'])) {
+        $output .= ' <div class="description">' . $element['#description'] . "</div>\n";
+      }
 
       break;
 
@@ -77,3 +77,34 @@ $output .= ' <div class="description">' . $element['#description'] . "</div>\n";
   return $output;
 }
 
+/**
+ * Implements hook_menu_local_task().
+ */
+function doug_fir_catalog_menu_local_task($variables) {
+  $link = $variables['element']['#link'];
+  $link['localized_options']['html'] = TRUE;
+  return '<li>' . l($link['title'], $link['href'], $link['localized_options']) . '</li>' . "\n";
+}
+
+/**
+ * Implements hook_menu_local_tasks().
+ */
+function doug_fir_catalog_menu_local_tasks($variables) {
+
+  $output = '';
+
+  if (!empty($variables['primary'])) {
+    $variables['primary']['#prefix'] = '<ul class="nav nav-tabs">';
+    $variables['primary']['#suffix'] = '</ul>';
+    $output .= drupal_render($variables['primary']);
+  }
+
+  if (!empty($variables['secondary'])) {
+
+    $variables['secondary']['#prefix'] = '<ul class="nav nav-tabs">';
+    $variables['secondary']['#suffix'] = '</ul>';
+    $output .= drupal_render($variables['secondary']);
+  }
+
+  return $output;
+}
