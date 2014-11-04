@@ -5,77 +5,56 @@
  * Theme helper functions
  */
 
-
-/**
-* Replacement for theme_form_element().
-*/
-function doug_fir_catalog_webform_element($variables) {
-  // Ensure defaults.
-  $variables['element'] += array(
-    '#title_display' => 'before',
+function doug_fir_catalog_css_alter(&$css) {
+  $exclude = array(
+    // 'misc/vertical-tabs.css' => FALSE,
+    // 'modules/aggregator/aggregator.css' => FALSE,
+    // 'modules/block/block.css' => FALSE,
+    // 'modules/book/book.css' => FALSE,
+    // 'modules/comment/comment.css' => FALSE,
+    // 'modules/dblog/dblog.css' => FALSE,
+    // 'modules/file/file.css' => FALSE,
+    // 'modules/filter/filter.css' => FALSE,
+    // 'modules/forum/forum.css' => FALSE,
+    // 'modules/help/help.css' => FALSE,
+    // 'modules/menu/menu.css' => FALSE,
+    // 'modules/node/node.css' => FALSE,
+    // 'modules/openid/openid.css' => FALSE,
+    // 'modules/poll/poll.css' => FALSE,
+    // 'modules/profile/profile.css' => FALSE,
+    // 'modules/search/search.css' => FALSE,
+    // 'modules/statistics/statistics.css' => FALSE,
+    // 'modules/syslog/syslog.css' => FALSE,
+    // 'modules/system/admin.css' => FALSE,
+    // 'modules/system/maintenance.css' => FALSE,
+    // 'modules/system/system.css' => FALSE,
+    // 'modules/system/system.admin.css' => FALSE,
+    // 'modules/system/system.base.css' => FALSE,
+    // 'modules/system/system.maintenance.css' => FALSE,
+    // 'modules/system/system.menus.css' => FALSE,
+    // 'modules/system/system.messages.css' => FALSE,
+    // 'modules/system/system.theme.css' => FALSE,
+    // 'modules/taxonomy/taxonomy.css' => FALSE,
+    // 'modules/tracker/tracker.css' => FALSE,
+    // 'modules/update/update.css' => FALSE,
+    // 'modules/user/user.css' => FALSE,
+    //'sites/all/themes/doug-fir/css/main-responsive.css' => FALSE,
+    //'sites/default/modules/contrib/commerce_add_to_cart_confirmation/css/commerce_add_to_cart_confirmation.css' => FALSE,
   );
-
-  $element = $variables['element'];
-
-  // All elements using this for display only are given the "display" type.
-  if (isset($element['#format']) && $element['#format'] == 'html') {
-    $type = 'display';
-  }
-  else {
-    $type = (isset($element['#type']) && !in_array($element['#type'], array('markup', 'textfield'))) ? $element['#type'] : $element['#webform_component']['type'];
-  }
-  $parents = str_replace('_', '-', implode('--', array_slice($element['#parents'], 1)));
-
-  $wrapper_classes = array(
-   'form-item',
-   'webform-component',
-   'webform-component-' . $type,
-  );
-  if (isset($element['#title_display']) && $element['#title_display'] == 'inline') {
-    $wrapper_classes[] = 'webform-container-inline';
-  }
-  $output = '<div class="' . implode(' ', $wrapper_classes) . '" id="webform-component-' . $parents . '">' . "\n";
-  $required = !empty($element['#required']) ? '<span class="form-required" title="' . t('This field is required.') . '">*</span>' : '';
-
-  // If #title is not set, we don't display any label or required marker.
-  if (!isset($element['#title'])) {
-    $element['#title_display'] = 'none';
-  }
-  $prefix = isset($element['#field_prefix']) ? '<span class="field-prefix">' . _webform_filter_xss($element['#field_prefix']) . '</span> ' : '';
-  $suffix = isset($element['#field_suffix']) ? ' <span class="field-suffix">' . _webform_filter_xss($element['#field_suffix']) . '</span>' : '';
-
-  switch ($element['#title_display']) {
-    case 'inline':
-    case 'before':
-    case 'invisible':
-      $output .= ' ' . theme('form_element_label', $variables);
-      if (!empty($element['#description'])) {
-        $output .= ' <div class="description">' . $element['#description'] . "</div>\n";
-      }
-
-      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
-      break;
-
-    case 'after':
-      $output .= ' ' . $prefix . $element['#children'] . $suffix;
-      $output .= ' ' . theme('form_element_label', $variables) . "\n";
-      if (!empty($element['#description'])) {
-        $output .= ' <div class="description">' . $element['#description'] . "</div>\n";
-      }
-
-      break;
-
-    case 'none':
-    case 'attribute':
-      // Output no label and no required marker, only the children.
-      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
-      break;
-  }
-
-  $output .= "</div>\n";
-
-  return $output;
+  $css = array_diff_key($css, $exclude);
 }
+
+function doug_fir_catalog_preprocess_page(&$variables) {
+  // Get the entire main menu tree
+  $responsive_menu_tree = menu_tree_all_data('menu-responsive-menu');
+
+  // Add the rendered output to the $main_menu_expanded variable
+  $variables['responsive_menu_expanded'] = menu_tree_output($responsive_menu_tree);
+
+  //dpm($variables['theme_hook_suggestions'], 'theme hook sugestions page');
+}
+
+
 
 /**
  * Implements hook_menu_local_task().

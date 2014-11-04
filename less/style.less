@@ -1,0 +1,32 @@
+// Media query variables.
+// @mobile:  ~'(max-width: 767px)';
+// @tablet:  ~'(min-width: 768px) and (max-width: 979px)';
+// @normal:  ~'(min-width: 980px) and (max-width: 1199px)';
+// @wide:    ~'(min-width: 1200px)';
+
+// // Bootstrap library.
+//@import 'bootstrap.less';
+@import '../bootstrap/less/mixins.less';
+@import '../bootstrap/less/variables.less';
+@import '../bootstrap/less/utilities.less';
+@import '../bootstrap/less/labels-badges.less';
+@import '../bootstrap/less/pagination.less';
+@import '../bootstrap/less/pager.less';
+// @import 'sprites.less';
+// @import 'responsive.less';
+
+
+// Components: Buttons & Alerts
+@import '../bootstrap/less/thumbnails.less';
+@import '../bootstrap/less/buttons.less';
+@import '../bootstrap/less/button-groups.less';
+@import '../bootstrap/less/alerts.less'; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+
+// Base-theme overrides.
+@import 'overrides.less';
+
+// Theme specific.
+@import 'content.less';
+
+
+

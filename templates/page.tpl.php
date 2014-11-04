@@ -100,11 +100,13 @@
 
 <!-- Top-Hat -->
 <?php if ($page['top']): ?>
-	<?php print render($page['top']); ?>
+  <?php print render($page['top']); ?>
 <?php endif; ?>
+
 <div id="mobile-icon-menu">
-  <a href='#' id="toggle-mobile-menu" class="m-icon-link"><i class="icon-reorder"></i></a>
-  <a href='<?php echo $base_path; ?>search/content' id="mobile-search-link" class="m-icon-link"><i class="icon-search"></i></a>
+  <a title="Menu" href='#' id="toggle-mobile-menu" class="m-icon-link"><i class="icon-reorder"></i></a>
+  <a title="Browse" href='#extras' id="toggle-mobile-extra" class="m-icon-link"><i class="icon-plus-sign"></i></a>
+  <a title="Search" href='<?php echo $base_path; ?>search/content' id="mobile-search-link" class="m-icon-link"><i class="icon-search"></i></a>
 </div>
 
 <div id='page-wrapper' class='container'>
@@ -114,15 +116,19 @@
 
     <?php
     // Check for Organic Group
-    if (function_exists('osu_groups_get_group_name')) {
+
+    if (function_exists('osu_groups_get_group_name') ) {
+      $node = isset($node) ? $node : NULL;
       $group_name = osu_groups_get_group_name($node);
       if ($group_name) {
         // Set parent name and link to be 'site - unit'
+        $unit_name = isset($group_name['parent_name']) ? $group_name['parent_name'] : '';
+        $unit_path = isset($group_name['parent_path']) ? $group_name['parent_path'] : '';
         $parent = array(
           'url'       => $front_page,
           'name'      => $site_name,
-          'unit_name' => $group_name['parent_name'],
-          'unit_path' => $front_page . $group_name['parent_path'],
+          'unit_name' => $unit_name,
+          'unit_path' => $front_page . $unit_path,
           );
 
         // Set site name and link to be the top-level group page
@@ -138,11 +144,12 @@
     else {
       // Not an organic group, but parent could be set in theme options.
       $parent = parent_site_name();
+      $parent['url'] = 'http://' . $parent['url'];
     }
 
     if (!empty($parent)){ ?>
-      <a class="parent" href='<?php print $parent['url']; ?>'><?php print $parent['name']; ?></a>
-      <?php if ($parent['unit_name']) { ?>
+      <a class="parent" href='<?php print $parent['url']; ?>'><?php print isset($parent['name']) ? $parent['name'] : ''; ?></a>
+      <?php if (isset($parent['unit_name']) && !empty($parent['unit_name'])) { ?>
       - <a class="parent" href='<?php print $parent['unit_path']; ?>'><?php print $parent['unit_name']; ?></a>
       <?php }
     } ?>
@@ -150,38 +157,61 @@
 
   </div>
   <?php
+    $menu_name = 'menu-responsive-menu';
+    //$menu_name = 'main-menu';
+
+      // Check for a book menu first
+      if (function_exists('osu_groups_get_book_menu_name')) {
+        if(osu_groups_get_book_menu_name()) {
+          $menu_name = osu_groups_get_book_menu_name();
+        }
+      }
       $audience_menu = menu_tree_all_data('audience-menu', '', 2);
-      $main_menu = menu_tree_all_data('main-menu', '', 2);
+      $main_menu = menu_tree_all_data($menu_name, '', 3);
       $tophat_menu = menu_tree_all_data('osu-top-hat', '', 1);
-			$extension_top_hat_settings = variable_get('extension_top_hat_settings');
       if ( !empty($audience_menu) || !empty($main_menu) || !empty($tophat_menu) ) {
-        echo '<ul id="mobile-menu">';
+        echo '<ul id="mobile-menu" role="navigation">';
           if (!empty($main_menu) ) {
             echo '<li id="mobile-main-menu">';
-            $menu_tree = menu_tree_output($main_menu);
-              print render($menu_tree);
-              //print render(menu_tree_output($main_menu));
+              // $menu_tree = menu_tree_output($main_menu);
+              print render($responsive_menu_expanded);;
             echo '</li>';
           }
           if (!empty($audience_menu) ) {
             echo '<li id="mobile-audience-menu">';
-              print render(menu_tree_output($audience_menu));
+              $menu_tree = menu_tree_output($audience_menu);
+              print render($menu_tree);
             echo '</li>';
           }
-          if (!empty($tophat_menu) && !($extension_top_hat_settings['hide_utility'])) {
+          if (!empty($tophat_menu) ) {
             echo '<li id="mobile-osu-top-hat">';
-              print render(menu_tree_output($tophat_menu));
+              $menu_tree = menu_tree_output($tophat_menu);
+              print render($menu_tree);
             echo '</li>';
           }
          echo '</ul>';
         }
+
+        //dpm($responsive_menu_expanded, 'responsive menu expanded');
    ?>
    <!-- Main menu navbar -->
    <?php if ($page['nav']): ?>
-      <div id='main-menu'>
+      <div id='main-menu' role="navigation">
           <?php print render($page['nav']); ?>
       </div> <!-- /#main-menu -->
     <?php endif; ?>
+
+    <!-- Messages and breadcrumbs -->
+    <div id="messages">
+      <?php if ($messages){
+        print $messages;
+      }
+
+      if ($breadcrumb && ! theme_get_setting('hide_breadcrumbs') ) {
+        print $breadcrumb;
+        }
+      ?>
+    </div> <!-- messages -->
 
 
     <!-- Full width top region -->
@@ -225,22 +255,6 @@
         <!-- Main content and middle sidebar -->
           <div class='span<?php print $main_cols; ?>'>
 
-
-            <!-- Messages and breadcrumbs -->
-            <div id="messages">
-              <?php
-                if ($messages){
-                  print $messages;
-                }
-
-                if ($breadcrumb && ! theme_get_setting('hide_breadcrumbs') ) {
-                  print $breadcrumb;
-                }
-              ?>
-            </div> <!-- messages -->
-
-
-
             <!-- Pre-content -->
             <?php if ($page['pre_content']): ?>
               <div id='pre-content'>
@@ -266,20 +280,9 @@
                 </div>
               <?php endif; ?>
 
-              <div id='content'>
-                <a name="main-content"></a>
+              <div id='content' role="main">
                 <?php print render($page['content']); ?>
               </div> <!-- /content -->
-
-							<?php if($node): ?>
-								<?php	$links = node_view($node); ?>
-								<?php if ($links): ?>
-									<div id="links">
-										<?php print render($links['links']); ?>
-									</div>
-								<?php endif; ?>
-							<?php endif; ?>
-
             <?php endif; ?>
 
             <!-- Main page columns  -->
@@ -328,7 +331,7 @@
             <?php endif; ?>
 
 
-            <!-- Post-content -->
+            <!-- Post-ontent -->
             <?php if ($page['post_content']): ?>
               <div id='post-content' >
                 <div class='content'>
@@ -352,7 +355,7 @@
       </div> <!-- /Main Columns -->
 
       <!-- Right Sidebar - sidebar_first -->
-      <a name="extras"></a>
+      <a id="extras"></a>
       <?php if ($page['sidebar_first']): ?>
         <div id='sidebar-first' class='span3'>
           <?php print render($page['sidebar_first']); ?>
@@ -373,9 +376,9 @@
   </div> <!-- /container -->
 
   <!-- Page Footer -->
-	<?php if ($page['footer']) {
-             print render($page['footer']);
-         	} ?>
+  <?php if ($page['footer']) {
+    print render($page['footer']);
+  } ?>
 
 
-</div> <!-- /page-wrapper -->
+<!-- </div> --> <!-- /page-wrapper -->

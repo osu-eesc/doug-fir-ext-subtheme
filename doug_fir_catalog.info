@@ -1,7 +1,7 @@
 name =  Doug Fir Catalog Style
 description = Doug Fir Ext is a subtheme of Doug Fir. Built from the start with a responsive layout, it works well in phones, tablets, as well as laptops and desktops.  It can be used by any OSU department, institute, program or academic unit. It includes space for rotating feature stories, rotating highlights, video carousel and space for formatted calendar and news feeds.
 package = OSU
-version = 7.x-1.1.7
+version = 7.x-2.5.2
 core = 7.x
 base theme = doug_fir
 
@@ -11,6 +11,7 @@ stylesheets[all][] = css/custom.css
 stylesheets[print][] = css/print.css
 
 
+; Default regions
 regions[page_top]           = Page Top
 regions[page_bottom]        = Page Bottom
 regions[top]                = Top

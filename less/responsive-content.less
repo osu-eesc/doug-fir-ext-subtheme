@@ -1,78 +1,3 @@
-.clearfix {
-  *zoom: 1;
-}
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-.clearfix:after {
-  clear: both;
-}
-.hide-text {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
-.input-block-level {
-  display: block;
-  width: 100%;
-  min-height: 32px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-/* changed from 60 */
-.pull-right {
-  float: right;
-}
-.pull-left {
-  float: left;
-}
-.hide {
-  display: none;
-}
-.show {
-  display: block;
-}
-.invisible {
-  visibility: hidden;
-}
-.affix {
-  position: fixed;
-}
-.well {
-  min-height: 20px;
-  padding: 19px;
-  margin-bottom: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #e3e3e3;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-}
-.well blockquote {
-  border-color: #ddd;
-  border-color: rgba(0, 0, 0, 0.15);
-}
-.well-large {
-  padding: 24px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-}
-.well-small {
-  padding: 9px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
 /**
  * @file catalog-responsive.css
  *
@@ -82,89 +7,98 @@
  * Oregon State University
  *
  */
+
 @media (max-width: 480px) {
+
   #osu-top-hat {
-    background-color: #424242 !important;
-    background-image: -moz-linear-gradient(top, #555555, #252525) !important;
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#555555), to(#252525)) !important;
-    background-image: -webkit-linear-gradient(top, #555555, #252525) !important;
-    background-image: -o-linear-gradient(top, #555555, #252525) !important;
-    background-image: linear-gradient(to bottom, #555555, #252525) !important;
-    background-repeat: repeat-x !important;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff555555', endColorstr='#ff252525', GradientType=0) !important;
+    #gradient .vertical(@gray, @grayDarker) !important;
+    // border-bottom: 2px @grayDark solid !important;
   }
-  div.content {
+
+  div.content {  // override CWS style
     margin: 0;
   }
+
   .region-content {
     padding-left: 0.75em ;
     padding-right: 0.75em;
   }
-  #page-title {
-    font-size: 20px !important;
+
+
+  #page-title { // override CWS style
+    font-size: @fontSizeLarge !important;
     padding: 0 0.75em !important;
   }
+
   article.view-mode-full figure.field-publication-thumbnail img {
     max-width: 100px;
+    height: auto;
     float: none;
     height: auto;
     margin: 0;
   }
+
+  // don't show thumbnail in search results
   .page-search figure.field-publication-thumbnail,
   .page-search figure.field-publication-thumbnail a img,
   .fieldset-wrapper .span3 {
     display: none !important;
   }
+
   .page-search .content legend {
     margin-bottom: 10px;
   }
+
   .page-search .row-fluid:after {
     margin-top: 20px ;
   }
+
   .page-search form .ds-search-extra {
     margin-bottom: 10px ;
   }
+
   .node-type-osu-catalog-publication .commerce-add-to-cart input.form-submit {
     float: right;
     margin: 0;
   }
+
   .node-type-osu-catalog-publication .form-item-quantity {
     float: none;
     margin: 0;
   }
+
+  // .region-content .content {
+  //   padding: 0;
+  // }
+
+
   .region-sidebar-first {
     margin: 0.4em 0.625em 0 0.625em;
+    // margin-left: 0.625em !important;
+    // margin-right: 0.625em !important
   }
+
   #sidebar-first .region-sidebar-first > div + div {
     margin-bottom: 0;
   }
+
   #sidebar-first .block h2 {
     margin-bottom: 0;
   }
+
   #block-views-shopping-cart-block > div {
     margin-bottom: 0;
   }
+
   .region-sidebar-first {
-    min-height: 20px;
-    padding: 19px;
-    margin-bottom: 20px;
-    background-color: #f5f5f5;
-    border: 1px solid #e3e3e3;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    .well();
   }
-  .region-sidebar-first blockquote {
-    border-color: #ddd;
-    border-color: rgba(0, 0, 0, 0.15);
-  }
+
   h2 {
     font-size: 1.125em;
     line-height: 1.2;
   }
+
   h3.home-title,
   h3.radioactivity-title {
     font-size: 1.0em;
@@ -173,6 +107,7 @@
     line-height: 1.1;
     font-weight: normal !important;
   }
+
   .views-bootstrap-grid-plugin-style .radioactivity-series-number,
   .views-bootstrap-grid-plugin-style .radioactivity-new-revised-text,
   .new-revised-text,
@@ -180,64 +115,94 @@
     padding-left: 100px;
     font-size: .875em;
   }
+
   .view-shopping-cart .line-item-summary ul.links li {
     margin-top: -7px;
   }
+
   .region-sidebar-first .block-menu ul.menu {
     text-align: left;
   }
-  .view-shopping-cart .line-item-summary {
+
+  .view-shopping-cart  .line-item-summary {
     text-align: left;
   }
+
   .view-shopping-cart .view-footer .line-item-summary {
     display: inline-block;
     margin: 0 1em 1em 0;
   }
+
   span.line-item-total-raw {
     padding-left: 10px;
   }
+
   .region-sidebar-first > div + div {
-    margin-bottom: 0;
+    margin-bottom: 0;  // remove margin on small screen
   }
+
   div.messages.commerce-add-to-cart-confirmation {
     background-color: #f9f9f9;
     left: 49%;
-    margin-left: -48% !important;
-    /* width/2 */
+    margin-left: -48% !important; /* width/2 */
     width: 98%;
-    border-color: #555555;
+    border-color: @gray;
   }
+
   div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper {
     padding-top: 60px;
   }
+
   .commerce-add-to-cart-confirmation .button.continue {
     white-space: normal;
   }
+
   .page-taxonomy-term .term-description {
     padding: 9px;
     margin-bottom: 0px;
-    font-size: 16px;
+    font-size: @baseFontSize;
   }
+
   .mobile-header {
     font-weight: normal !important;
     text-transform: uppercase;
-    font-family: 'Gudea', Arial, Verdana, sans-serif;
+    font-family: @sansFontFamily;
   }
+
   div.line-item-total {
     margin-bottom: 10px !important;
   }
-}
+
+
+} // @media (max-width: 480px)
+
+
+
+@media (max-width: 540px) {
+
+} // @media (max-width: 540px)
+
+@media (min-width: 481px) and (max-width: 540px) {
+
+} // @media (min-width: 481px) and (max-width: 540px)
+
 /* Here goes stuff we want for small tablets, but NOT for phones */
+@media (min-width: 481px) and (max-width: 767px) {
+
+
+
+} // @media (min-width: 481px) and (max-width: 767px)
+
 @media (max-width: 767px) {
+
   a.m-icon-link {
     padding: 11px 8px 9px !important;
     text-decoration: none;
+    &:hover, &:active, &:focus {
+      background-color: @grayDarker !important;
+    }
   }
-  a.m-icon-link:hover,
-  a.m-icon-link:active,
-  a.m-icon-link:focus {
-    background-color: #252525 !important;
-  }
+
   h3.home-title,
   h3.radioactivity-title,
   .views-bootstrap-grid-plugin-style .radioactivity-series-number,
@@ -247,25 +212,37 @@
   .views-bootstrap-grid-plugin-style .new-revised-text,
   .views-bootstrap-carousel-plugin-style .pub-series-number,
   .views-bootstrap-carousel-plugin-style .short-pub-date {
-    padding-left: 100px;
-    /* 100px */
+    padding-left: 100px; /* 100px */
   }
+
   h3.home-title,
   h3.radioactivity-title {
     margin: 0;
     padding-left: 100px;
     line-height: 1.1;
   }
+
   h3.home-title {
     font-size: 1.063em;
     margin-bottom: 10px;
   }
+
   h3.radioactivity-title {
     font-size: 1.0em;
   }
+
   .views-bootstrap-grid-plugin-style .new-revised-text {
     margin-bottom: 10px;
   }
+
+  // article.view-mode-full figure.field-publication-thumbnail img {
+  //   max-width: 35%;
+  //   height: auto;
+  //   float: left;
+  //   height: auto;
+  //   margin: 0;
+  // }
+
   /*.page-user #user_register_form,*/
   .page-user #user_login_form,
   .page-user .create-account,
@@ -276,76 +253,112 @@
   .page-checkout #user_pass_form {
     width: 100%;
   }
+
   #mobile-menu li.expanded ul li {
     padding: 0 0 0 10px;
   }
+
   #mobile-menu ul li a + ul {
     display: block !important;
   }
+
   #mobile-menu #mobile-osu-top-hat {
     padding-top: 0 !important;
   }
-}
+
+} // @media (max-width: 767px)
+
 @media (max-width: 800px) {
   article.view-mode-full figure.field-publication-thumbnail {
     margin: 0;
     max-width: 180px;
   }
-}
+} // @media (max-width: 800px)
+
 @media (min-width: 768px) {
   /* set  a min-height for tablet and up sizes */
   #page-wrapper.container {
     min-height: 600px;
   }
+
   .views-bootstrap-grid-plugin-style .home-series-number,
   .views-bootstrap-grid-plugin-style .full-series-number,
   .views-bootstrap-grid-plugin-style .new-revised-text,
   .views-bootstrap-carousel-plugin-style .pub-series-number,
   .views-bootstrap-carousel-plugin-style .short-pub-date {
-    padding-left: 100px;
-    /* 100px */
+    padding-left: 100px; /* 100px */
   }
+
   h3.home-title,
   h3.radioactivity-title {
     margin: 0;
     padding-left: 100px;
     line-height: 1.2;
   }
+
   h3.home-title {
     font-size: 1.063em;
   }
+
   h3.radioactivity-title {
     font-size: 1.0em;
   }
+
   .views-bootstrap-grid-plugin-style .radioactivity-series-number,
   .views-bootstrap-grid-plugin-style .radioactivity-new-revised-text {
     padding-left: 100px;
     font-size: .875em;
   }
+
   #block-views-shopping-cart-block .content {
     text-align: right;
     margin: 0;
   }
+
   .view-shopping-cart .view-footer .line-item-summary .line-item-total {
     display: inline-block;
     margin: 0 0.5em;
   }
+
   /* decrease font-size on taxonomy aggregated item count */
   .view-term-parent-view span.views-field-tid {
     font-size: 12px;
   }
+
   a.m-icon-extra {
     padding: 11px 13px 9px;
-    color: #ffffff;
+    color: @white;
+
   }
+
   a.m-icon-extra:hover,
   a.m-icon-extra:active,
   a.m-icon-extra:focus {
     background-color: #373737;
   }
-}
+
+
+} // @media (min-width: 768px)
+
 @media (min-width: 769px) {
   a.m-icon-extra {
     display: none;
   }
-}
+} // @media (min-width: 769px)
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+} // @media (min-width: 768px) and (max-width: 979px)
+
+@media (max-width: 979px) {
+
+} // @media (max-width: 979px)
+
+@media (min-width: 980px) {
+
+} // @media (min-width: 980px)
+
+@media (min-width: 1200px) {
+
+} // @media (min-width: 1200px)
+

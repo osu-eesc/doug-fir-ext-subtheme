@@ -48,7 +48,7 @@ $lang = $language->language;
 <!--[if IE 8]> <html lang="<?php echo $lang; ?>" class="ie ie8 <?php print $html_classes; ?>"> <![endif]-->
 <!--[if gt IE 8]><!--><html class="<?php print $html_classes; ?>" lang="<?php echo $lang; ?>"><!--<![endif]-->
 
-<head profile="<?php print $grddl_profile; ?>">
+<head>
   <?php print $head; ?>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
