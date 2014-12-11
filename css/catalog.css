@@ -1253,6 +1253,17 @@ a {
   margin: 0;
   padding: 0;
 }
+#main-menu ul.nice-menu li.menu-path-nolink {
+  background: url('../images/h-menu-arrow-down.png') right center no-repeat;
+  display: inline-block;
+  color: #ffffff;
+  padding: 10px 32px 10px 16px;
+  text-decoration: none;
+}
+#main-menu ul.nice-menu li.menu-path-nolink:hover {
+  background: url('../images/h-menu-arrow-down.png') right center no-repeat;
+  text-decoration: none;
+}
 /*==========  buttons  ==========*/
 a.button,
 .button,
