@@ -33,7 +33,9 @@ a.button,
 .form-submit,
 .view-shopping-cart .line-item-summary ul.links li,
 input.form-submit,
-.create-account a.login-register {
+.create-account a.login-register,
+div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper .button.checkout,
+div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper .button.continue {
   .btn();
   .btn-small();
   .btn-link();
@@ -42,13 +44,20 @@ input.form-submit,
   .box-shadow(0 1px 3px rgba(0,0,0,.055));
 }
 
+
 .btn-inverse a,
-.commerce-add-to-cart-confirmation .button.checkout a {
+.commerce-add-to-cart-confirmation .button {
   color: @white;
+  font-weight: 400 !important;
 }
 
-.commerce-add-to-cart-confirmation .button.continue {
+div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper .button.continue {
+  .btn();
+  .btn-small();
+  .btn-link();
   .btn-inverse();
+  .border-radius(@baseBorderRadius);
+  .box-shadow(0 1px 3px rgba(0,0,0,.055));
   white-space: nowrap;
   margin-top: 10px;
 }
@@ -59,9 +68,13 @@ input.form-submit .form-button-disabled {
   .btn-small();
 }
 
+
+
 a.button,
-.view-shopping-cart .line-item-summary ul.links a {
+.view-shopping-cart .line-item-summary ul.links a,
+.messages.commerce-add-to-cart-confirmation .button a {
   color: @white;
+  font-weight: 400 !important;
 }
 
 /* don't display title on project pages   */
@@ -193,6 +206,12 @@ div.field-publication-description {
 .view-display-id-eva_links {
   padding: 1.0em 0;
   .clearfix();
+}
+
+// don't display extra fields on project pages (hack to get add to cart form to show up)
+.node-type-osu-catalog-publication .field-commerce-stock,
+.node-type-osu-catalog-publication .field-add-to-store {
+  display: none;
 }
 
 
@@ -399,79 +418,9 @@ div.field-commerce-price {
   width: 36px;
 }
 
-/*==========  THese might be needed later  ==========*/
 
-// div.messages.commerce-add-to-cart-confirmation .view-confirm-message-product-display .view-content {
-//   padding-bottom: 30px;
-//   position: relative;
-//   width: 90%;
-// }
-
-// div.messages.commerce-add-to-cart-confirmation {
-//   color: #252525;
-//   position: relative;
-//   margin-left: -50% !important;
-//   /*width: 70%;*/
-//   min-height: 300px;
-// }
-
-// div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper {
-//   background-color: rgba(0, 0, 0, 0);
-//   padding: 0;
-//   position: relative;
-//   margin: auto;
-//   width: 90%;
-//   text-align: right;
-// }
-
-// div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper .button.checkout,
-// div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper .button.continue {
-//   // padding: 2px 8px;
-//   // width: 100px;
-//   // margin: 0 10px;
-//   float: right;
-//   // position: relative;
-//   // display: inline-block;
-// }
-
-// div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper .button.checkout a,
-// div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper .button.continue {
-//   font-weight: normal;
-// }
-
-// .view-confirm-message-product-display .field-commerce-price {
-//   width: 100%;
-//   font-weight: normal;
-// }
-
-// .view-confirm-message-product-display .commerce-product-product h2 {
-//   font-size: 1.125em;
-//   line-height: 1.2;
-// }
-
-// .view-confirm-message-product-display .views-field-quantity span.views-label-quantity {
-//   font-size: 14px;
-// }
-
-// div.messages.commerce-add-to-cart-confirmation .view-confirm-message-product-display .view-content .views-field-commerce-total .field-content {
-//   color: #252525;
-// }
-
-// div.messages.commerce-add-to-cart-confirmation .view-confirm-message-product-display {
-//   margin-bottom: 1em;
-// }
-
-// .view-confirm-message-product-display table.commerce-price-rrp-your-price {
-
-// }
-
-// div.messages.commerce-add-to-cart-confirmation .message-inner .commerce-add-to-cart-confirmation-close {
-//   right: 30px;
-// }
-
-
-
-#block-views-shopping-cart-block .content .view-shopping-cart .line-item-summary ul.links li a:hover {
+#block-views-shopping-cart-block .content .view-shopping-cart .line-item-summary ul.links li a:hover,
+.button-wrapper .button a:hover {
     text-decoration: none;
 }
 
@@ -1115,6 +1064,15 @@ h4.pub-series-number {  // tighten up spacing for related resources
 .jcarousel-next-disabled,
 .jcarousel-prev-disabled {  // don't show nav arrows that are disabled
   display: none;
+}
+
+
+div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper {
+background-color: transparent;
+}
+
+div.messages.commerce-add-to-cart-confirmation .message-inner .added-product-title {
+  padding: 8px 14px;
 }
 
 

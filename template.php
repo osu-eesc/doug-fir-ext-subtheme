@@ -54,6 +54,13 @@ function doug_fir_catalog_preprocess_page(&$variables) {
   //dpm($variables['theme_hook_suggestions'], 'theme hook sugestions page');
 }
 
+// add continue shopping button on empty cart page
+// // add continue shopping button on empty cart page
+function doug_fir_catalog_commerce_cart_empty_page() {
+  $continue_link = l(t('Continue shopping'), '<front>', array('attributes'=>array('class'=>'button')));
+  return '<div class="cart-empty-block">' . t('<p>Your shopping cart is empty.</p>') . $continue_link . '</div>';
+}
+
 
 
 /**
@@ -87,3 +94,8 @@ function doug_fir_catalog_menu_local_tasks($variables) {
 
   return $output;
 }
+
+
+
+
+

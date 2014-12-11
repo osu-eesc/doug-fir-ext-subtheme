@@ -30,8 +30,8 @@
     padding: 0 0.75em !important;
   }
 
-  article.view-mode-full figure.field-publication-thumbnail img {
-    max-width: 100px;
+  figure.field-publication-thumbnail img {
+    max-width: 140px;
     height: auto;
     float: none;
     height: auto;
@@ -95,7 +95,7 @@
   }
 
   h2 {
-    font-size: 1.125em;
+    font-size: 1.25em;
     line-height: 1.2;
   }
 
@@ -110,7 +110,7 @@
 
   .views-bootstrap-grid-plugin-style .radioactivity-series-number,
   .views-bootstrap-grid-plugin-style .radioactivity-new-revised-text,
-  .new-revised-text,
+  // .new-revised-text,
   .home-series-number {
     padding-left: 100px;
     font-size: .875em;
@@ -189,6 +189,12 @@
 /* Here goes stuff we want for small tablets, but NOT for phones */
 @media (min-width: 481px) and (max-width: 767px) {
 
+  figure.field-publication-thumbnail img {
+    max-width: 200px;
+    height: auto;
+    margin-right: 30px;
+  }
+
 
 
 } // @media (min-width: 481px) and (max-width: 767px)
@@ -211,7 +217,7 @@
   .views-bootstrap-grid-plugin-style .full-series-number,
   .views-bootstrap-grid-plugin-style .new-revised-text,
   .views-bootstrap-carousel-plugin-style .pub-series-number,
-  .views-bootstrap-carousel-plugin-style .short-pub-date {
+  .views-bootstrap-carousel-plugin-style .short-pub-date  {
     padding-left: 100px; /* 100px */
   }
 
@@ -235,13 +241,7 @@
     margin-bottom: 10px;
   }
 
-  // article.view-mode-full figure.field-publication-thumbnail img {
-  //   max-width: 35%;
-  //   height: auto;
-  //   float: left;
-  //   height: auto;
-  //   margin: 0;
-  // }
+
 
   /*.page-user #user_register_form,*/
   .page-user #user_login_form,
@@ -347,14 +347,33 @@
 } // @media (min-width: 769px)
 
 @media (min-width: 768px) and (max-width: 979px) {
+  .media figure.field-publication-thumbnail {
+  .pull-left();
+  text-align: left;
+ }
 
 } // @media (min-width: 768px) and (max-width: 979px)
 
 @media (max-width: 979px) {
 
+
+
 } // @media (max-width: 979px)
 
 @media (min-width: 980px) {
+
+  .node-type-publication-author .media-body {
+    padding-right: 120px;
+ }
+
+ .media figure.field-publication-thumbnail {
+  .pull-left();
+  text-align: left;
+ }
+
+ .media-heading h3 {
+  font-size: 1.125em;
+ }
 
 } // @media (min-width: 980px)
 

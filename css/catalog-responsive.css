@@ -104,8 +104,8 @@
     font-size: 20px !important;
     padding: 0 0.75em !important;
   }
-  article.view-mode-full figure.field-publication-thumbnail img {
-    max-width: 100px;
+  figure.field-publication-thumbnail img {
+    max-width: 140px;
     float: none;
     height: auto;
     margin: 0;
@@ -162,7 +162,7 @@
     border-color: rgba(0, 0, 0, 0.15);
   }
   h2 {
-    font-size: 1.125em;
+    font-size: 1.25em;
     line-height: 1.2;
   }
   h3.home-title,
@@ -175,7 +175,6 @@
   }
   .views-bootstrap-grid-plugin-style .radioactivity-series-number,
   .views-bootstrap-grid-plugin-style .radioactivity-new-revised-text,
-  .new-revised-text,
   .home-series-number {
     padding-left: 100px;
     font-size: .875em;
@@ -228,6 +227,13 @@
   }
 }
 /* Here goes stuff we want for small tablets, but NOT for phones */
+@media (min-width: 481px) and (max-width: 767px) {
+  figure.field-publication-thumbnail img {
+    max-width: 200px;
+    height: auto;
+    margin-right: 30px;
+  }
+}
 @media (max-width: 767px) {
   a.m-icon-link {
     padding: 11px 8px 9px !important;
@@ -347,5 +353,23 @@
 @media (min-width: 769px) {
   a.m-icon-extra {
     display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .media figure.field-publication-thumbnail {
+    float: left;
+    text-align: left;
+  }
+}
+@media (min-width: 980px) {
+  .node-type-publication-author .media-body {
+    padding-right: 120px;
+  }
+  .media figure.field-publication-thumbnail {
+    float: left;
+    text-align: left;
+  }
+  .media-heading h3 {
+    font-size: 1.125em;
   }
 }

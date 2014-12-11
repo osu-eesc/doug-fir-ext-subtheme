@@ -54,3 +54,18 @@ border-radius: 0 14px 14px 0;
   line-height: 24px;
 }
 
+/*rss feeds page*/
+
+.page-rss-feeds .lead {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.page-rss-feeds h3 {
+  font-weight: 200;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  border: none;
+  background: none;
+}
+
