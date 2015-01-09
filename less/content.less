@@ -447,24 +447,25 @@ div.field-commerce-price {
 
 /* Social Media Sharing Block */
   .service-links {
-    float: right;
-    padding: 0 0 35px 25px;
+    .pull-right();
+    padding: 0 0 1.25em 1.5em;
     font-family: @titleFontFamily;
-    font-size: 77.5%;
+    font-size: @fontSizeMini;
     line-height: 1.75em;
-    padding-right: 2em;
   }
 
   .service-links:before {
+    color: @gray;
     content: "Share This: ";
-    border-bottom: 1px dotted #999;
+    border-bottom: 1px dotted @grayLight;
     display: block;
   }
 
   .service-links a {
+    color: @blue;
     display: block;
     margin: 0;
-    border-bottom: 1px dotted #999;
+    border-bottom: 1px dotted @grayLight;
   }
 
 
