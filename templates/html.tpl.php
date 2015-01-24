@@ -65,7 +65,7 @@ $lang = $language->language;
 
   <!-- CSS -->
   <?php print $styles; ?>
-  <link href='http://fonts.googleapis.com/css?family=Gudea:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Gudea:400,400italic,700' rel='stylesheet' type='text/css'>
   <!-- These will insert some CSS to hide or show elements based on our theme settings -->
   <?php echo hide_book_nav(); ?>
   <?php echo hide_terms(); ?>
