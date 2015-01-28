@@ -1229,6 +1229,13 @@ div.password-suggestions ul {
   position: relative;
   top: 1px;
 }
+@font-face {
+  font-family: 'EksjaExtremesRegular';
+  src: url(../fonts/Eksja/Eksja-regular-webfont.eot);
+  src: local('☺'), url(../fonts/Eksja/Eksja-regular-webfont.woff) format('woff'), url(../fonts/Eksja/Eksja-regular-webfont.ttf) format('truetype'), url(../fonts/Eksja/Eksja-regular-webfont.svg#webfont) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 h1,
 h2,
 h3,
@@ -2099,12 +2106,12 @@ div.field-commerce-price {
 /**
 * Cart block
 */
-.front #sidebar-first #block-menu-menu-user-menu {
+.front #sidebar-first #block-menu-menu-user-menu .content {
   margin-top: 15px;
 }
-#sidebar-first #block-menu-menu-user-menu {
+#sidebar-first #block-menu-menu-user-menu .content {
   margin-top: -15px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 /*#block-views-shopping-cart-block .content,*/
 #block-views-shopping-cart-block .line-item-summary .line-item-total-label {
@@ -2743,4 +2750,8 @@ h4.pub-series-number {
 }
 div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper {
   background-color: transparent;
+}
+.rss-feed-icon {
+  float: right;
+  vertical-align: bottom;
 }

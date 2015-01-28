@@ -1,4 +1,14 @@
 // Insert your styling here.
+//
+@font-face {
+  font-family: 'EksjaExtremesRegular';
+  src: url(../fonts/Eksja/Eksja-regular-webfont.eot);
+  src: local('☺'), url(../fonts/Eksja/Eksja-regular-webfont.woff) format('woff'),
+  url(../fonts/Eksja/Eksja-regular-webfont.ttf) format('truetype'),
+  url(../fonts/Eksja/Eksja-regular-webfont.svg#webfont) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 h1, h2, h3, h4, h5, h6 {
   color: @grayDarker;
@@ -362,13 +372,13 @@ div.field-commerce-price {
 * Cart block
 */
 
-.front #sidebar-first #block-menu-menu-user-menu {
+.front #sidebar-first #block-menu-menu-user-menu .content {
   margin-top: 15px;
 }
 
-#sidebar-first #block-menu-menu-user-menu {
+#sidebar-first #block-menu-menu-user-menu .content {
   margin-top: -15px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 
@@ -1077,15 +1087,6 @@ h4.pub-series-number {  // tighten up spacing for related resources
 }
 
 
-
-// .search-form .container-inline {
-//   display: inline;
-// }
-
-// .search-form .form-wrapper {
-//   display: inline-block;
-// }
-
 .jcarousel-next-disabled,
 .jcarousel-prev-disabled {  // don't show nav arrows that are disabled
   display: none;
@@ -1095,6 +1096,15 @@ h4.pub-series-number {  // tighten up spacing for related resources
 div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper {
 background-color: transparent;
 }
+
+.rss-feed-icon {
+  .pull-right();
+  vertical-align: bottom;
+}
+
+// #block-menu-menu-user-menu .content {
+//   margin-bottom: 20px;
+// }
 
 
 

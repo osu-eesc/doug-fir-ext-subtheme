@@ -170,7 +170,7 @@
       $main_menu = menu_tree_all_data($menu_name, '', 3);
       $tophat_menu = menu_tree_all_data('osu-top-hat', '', 1);
       if ( !empty($audience_menu) || !empty($main_menu) || !empty($tophat_menu) ) {
-        echo '<ul id="mobile-menu" role="navigation">';
+        echo '<div id="mobile-menu" role="navigation"><ul class="mobile-menu">';
           if (!empty($main_menu) ) {
             echo '<li id="mobile-main-menu">';
               // $menu_tree = menu_tree_output($main_menu);
@@ -189,7 +189,7 @@
               print render($menu_tree);
             echo '</li>';
           }
-         echo '</ul>';
+         echo '</ul></div>';
         }
 
         //dpm($responsive_menu_expanded, 'responsive menu expanded');

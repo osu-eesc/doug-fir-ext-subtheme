@@ -40,9 +40,29 @@ function doug_fir_catalog_css_alter(&$css) {
     // 'modules/user/user.css' => FALSE,
     //'sites/all/themes/doug-fir/css/main-responsive.css' => FALSE,
     //'sites/default/modules/contrib/commerce_add_to_cart_confirmation/css/commerce_add_to_cart_confirmation.css' => FALSE,
+    'sites/all/themes/doug-fir/css/main.css' => FALSE,
   );
   $css = array_diff_key($css, $exclude);
 }
+
+/**
+ * Implements hook_preprocess_html()
+ *
+ *
+ */
+function doug_fir_catalog_preprocess_html(&$variables) {
+  // load fonts before doug_fir does
+  // $path = drupal_get_path('theme', 'doug_fir_catalog');
+
+  // $options = array(
+  //     'group'  =>  CSS_THEME,
+  //     'weight' => -100,
+  //   );
+  //   drupal_add_css($path . '/css/custom.css', $options );
+
+}
+
+
 
 function doug_fir_catalog_preprocess_page(&$variables) {
   // Get the entire main menu tree
@@ -52,6 +72,15 @@ function doug_fir_catalog_preprocess_page(&$variables) {
   $variables['responsive_menu_expanded'] = menu_tree_output($responsive_menu_tree);
 
   //dpm($variables['theme_hook_suggestions'], 'theme hook sugestions page');
+
+}
+
+function doug_fir_catalog_preprocess_node(&$vars) {
+
+  // don't display price if "add to store" isn't checked
+  if ($vars['field_add_to_store'][0]['value'] != 1) {
+    $vars['content']['product:commerce_price']['#access'] = FALSE;
+  }
 }
 
 // add continue shopping button on empty cart page
