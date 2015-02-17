@@ -15,6 +15,7 @@ body {
 .catman-invoice-header {
   float: right;
   margin-bottom: 40px;
+  margin-right: 20px;
 }
 
 a {
@@ -38,22 +39,12 @@ table td.views-field-operations-dropbutton {
   margin-bottom: 10px;
 }
 
-/*.ds-2col-stacked-fluid > .group-left {
-  padding-right: 20px;
-}
-
-.ds-2col-stacked-fluid > .group-right {
-  padding-left: 20px;
-}*/
-
 .catman-invoice-catman-invoice h3,
 h2.title {
   font-family: Georgia, "Times New Roman", Times, serif !important;
+  margin-right: 15px;
+  font-size: 110%;
 }
-
-/*.group-left h3 {
-  margin-top: 90px;
-}*/
 
 
 /* Table Styles */
@@ -63,6 +54,7 @@ table {
   border-spacing: 0;
   font-weight: 400;
   font-size: 75%;
+  border-top: 1px solid #BEBFB9;
 }
 
 /*.payment-table table {
@@ -125,7 +117,8 @@ div.tabs,
 div.region-top > div.container,
 #block-block-4,
 #sidebar-first,
-#footer {
+#footer,
+#page-title {
   display: none !important;
 }
 
