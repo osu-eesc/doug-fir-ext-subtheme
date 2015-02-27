@@ -77,7 +77,7 @@ function doug_fir_catalog_preprocess_page(&$variables) {
 
 function doug_fir_catalog_preprocess_node(&$vars) {
   // don't display price if "add to store" isn't checked
-  if ($vars['field_add_to_store'][0]['value'] != 1 && $vars['type'] == 'osu_catalog_publication') {
+  if (isset($vars['field_add_to_store'][0]['value']) && $vars['field_add_to_store'][0]['value'] != 1 && $vars['type'] == 'osu_catalog_publication') {
     $vars['content']['product:commerce_price']['#access'] = FALSE;
   }
 }
