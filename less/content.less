@@ -157,6 +157,14 @@ figure.field-publication-thumbnail img  {
   box-shadow:         1px 1px 5px 0px rgba(20, 20, 20, 0.75);
 }
 
+// no shadow for thumbnails with multiple images or that already have borders
+body.page-node-2196 figure.field-publication-thumbnail img,
+body.page-node-2429 figure.field-publication-thumbnail img {
+  -webkit-box-shadow: none;
+  -moz-box-shadow:    none;
+  box-shadow:         none;
+}
+
 .view-id-osu_catalog_homepage h2 {
   line-height: 1.3;
 }

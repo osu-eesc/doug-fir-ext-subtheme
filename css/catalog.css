@@ -1921,6 +1921,12 @@ figure.field-publication-thumbnail img {
   -moz-box-shadow: 1px 1px 5px 0px rgba(20, 20, 20, 0.75);
   box-shadow: 1px 1px 5px 0px rgba(20, 20, 20, 0.75);
 }
+body.page-node-2196 figure.field-publication-thumbnail img,
+body.page-node-2429 figure.field-publication-thumbnail img {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
 .view-id-osu_catalog_homepage h2 {
   line-height: 1.3;
 }
