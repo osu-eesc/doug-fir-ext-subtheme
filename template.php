@@ -126,4 +126,3 @@ function doug_fir_catalog_menu_local_tasks($variables) {
 
 
 
-
