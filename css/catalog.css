@@ -3632,3 +3632,21 @@ div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper {
   float: right;
   vertical-align: bottom;
 }
+aside.field-publication-image-ief {
+  float: right;
+  clear: both;
+  width: 300px;
+}
+figcaption.field-publication-image-caption {
+  font-size: small;
+  margin: 0 40px;
+}
+#content p.subhead-1a {
+  font-size: large;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+}
+.copyright-style,
+.LOTL-permit {
+  font-size: small;
+}
